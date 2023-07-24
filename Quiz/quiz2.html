@@ -1,56 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Quiz</title>
-        <link rel="stylesheet" href="../style/main.css" />
-    </head>
-    <body>
-        <header></header>
 
-        <main>
-            <ul>
-                <li>
-                    <input
-                        type="radio"
-                        id="pergunta-1"
-                        name="fav_language"
-                        value="pergunta-1"
-                    />
-                    <label for="pergunta-1">ALTERNATIVA A</label><br />
-                </li>
-                <li>
-                    <input
-                        type="radio"
-                        id="pergunta-1"
-                        name="fav_language"
-                        value="pergunta-1"
-                    />
-                    <label for="pergunta-1">ALTERNATIVA B</label><br />
-                </li>
-                <li>
-                    <input
-                        type="radio"
-                        id="pergunta-1"
-                        name="fav_language"
-                        value="pergunta-1"
-                    />
-                    <label for="pergunta-1">ALTERNATIVA C</label><br />
-                </li>
-                <li>
-                    <input
-                        type="radio"
-                        id="pergunta-1"
-                        name="fav_language"
-                        value="pergunta-1"
-                    />
-                    <label for="pergunta-1">ALTERNATIVA D</label><br />
-                </li>
-            </ul>
-        </main>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../style/main.css" />
+</head>
 
-        <footer></footer>
-        <script src="../script/quiz.js"></script>
-    </body>
+<body>
+    <header>
+        <h1>QUIZ-CSS</h1>
+    </header>
+
+    <main>
+        <h3>1 - Qual seletor CSS é usado para selecionar elementos com base em seus atributos e seus valores
+            correspondentes?</h3> <!--Resposta correta: b) padding-->
+        <div>
+            <div>
+                <ul>
+                    <li>
+                        <input type="radio" id="pergunta-1" name="fav_language" value="pergunta-1" />
+                        <label for="pergunta-1">a) margin</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-1" name="fav_language" value="pergunta-1" />
+                        <label for="pergunta-1">b) padding</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-1" name="fav_language" value="pergunta-1" />
+                        <label for="pergunta-1">c) border</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-1" name="fav_language" value="pergunta-1" />
+                        <label for="pergunta-1">d) display</label><br />
+                    </li>
+                </ul>
+            </div>
+            <h3>2 - Qual seletor CSS é usado para selecionar elementos com base em seus atributos e seus valores
+                correspondentes?</h3> <!--Resposta correta: d) Seletor de atributo (ex: [atributo=valor])-->
+            <div>
+                <ul>
+                    <li>
+                        <input type="radio" id="pergunta-2" name="fav_language" value="pergunta-2" />
+                        <label for="pergunta-2">a) Seletor de classe (ex: .nome-da-classe)</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-2" name="fav_language" value="pergunta-2" />
+                        <label for="pergunta-2">b) Seletor de elemento (ex: p, div, h1, etc.)</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-2" name="fav_language" value="pergunta-2" />
+                        <label for="pergunta-2">c) Seletor de filho direto (ex: pai > filho)</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-2" name="fav_language" value="pergunta-2" />
+                        <label for="pergunta-2">d) Seletor de atributo (ex: [atributo=valor])</label><br />
+                    </li>
+                </ul>
+            </div>
+            <h3>3 - Qual propriedade CSS é usada para controlar a ordem de empilhamento dos elementos, ou seja,
+                determinar quais elementos ficam na frente ou atrás de outros elementos?</h3>
+            <!--Resposta correta: a) z-index-->
+            <div>
+                <ul>
+                    <li>
+                        <input type="radio" id="pergunta-3" name="fav_language" value="pergunta-3" />
+                        <label for="pergunta-3">a) z-index</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-3" name="fav_language" value="pergunta-3" />
+                        <label for="pergunta-3">b) position</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-3" name="fav_language" value="pergunta-3" />
+                        <label for="pergunta-3">c) display</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-3" name="fav_language" value="pergunta-3" />
+                        <label for="pergunta-3">d) opacity</label><br />
+                    </li>
+                </ul>
+            </div>
+            <h3>4 - Qual das seguintes declarações CSS é usada para aplicar uma cor de fundo transparente a um elemento,
+                permitindo que o conteúdo do elemento seja visível através dele?</h3>
+            <!--Resposta correta: c) background: rgba(255, 255, 255, 0); -->
+            <div>
+                <ul>
+                    <li>
+                        <input type="radio" id="pergunta-4" name="fav_language" value="pergunta-4" />
+                        <label for="pergunta-4">a) background-color: transparent;</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-4" name="fav_language" value="pergunta-4" />
+                        <label for="pergunta-4">b) background-opacity: 0;</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-4" name="fav_language" value="pergunta-4" />
+                        <label for="pergunta-4">c) background: rgba(255, 255, 255, 0);</label><br />
+                    </li>
+                    <li>
+                        <input type="radio" id="pergunta-4" name="fav_language" value="pergunta-4" />
+                        <label for="pergunta-4">d) background-alpha: 0;</label><br />
+                    </li>
+                </ul>
+            </div>
+    </main>
+
+    <footer></footer>
+    <script src="../script/quiz.js"></script>
+</body>
+
 </html>
