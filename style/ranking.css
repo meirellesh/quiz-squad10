@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color:blueviolet;
+}
+
+.container {
+    display: flex;
+    background-color: aquamarine;
+    width: 100%;
+}
+
+.secao1 {
+    background-color: chocolate;
+}
+
+.secao2 {
+    background-color: coral;
+}
+
+/*.item-1 {
+    padding: 10px 50px;
+    width: 100%;
+    text-align: justify;
+}*/
