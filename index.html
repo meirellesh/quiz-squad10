@@ -14,27 +14,31 @@
     </header>
 
     <main>
-        <div>
+        <div class="container">
             <p>Coloque seu nome, escolha um tema e clique em iniciar</p>
             <form>
-                <table>
+                <table class="tabela">
                     <tr>
                         <td><label for="nome">Nome:</label></td>
-                        <td><input type="nome" name="nome" id="nome" maxlength="50" required></td>
+                    </tr>
+                    <tr>
+                        <td><input class="campo" type="nome" name="nome" id="nome" maxlength="50" required></td>
                     </tr>
                     <tr>
                         <td>Tema:</td>
+                    </tr>
+                    <tr>
                         <td>
-                            <select name="tema">
+                            <select class="campo" name="tema" id="tema">
                                 <option disabled selected></option>
                                 <option value="HTML">HTML</option>
                                 <option value="CSS">CSS</option>
                                 <option value="JS">JavaScript</option>
                             </select>
                         </td>
-                    </tr>
+                    </tr>   
                 </table>
-                <button type="submit">Iniciar Quiz</button>
+                <button class="campo" type="submit" id="btn">Iniciar Quiz</button>
             </form>
         </div>
     </main>
