@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Quiz</title>
-        <link rel="stylesheet" href="style/main.css" />
-    </head>
-    <body>
-        <header></header>
 
-        <main>
-            
-        </main>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style/main.css" />
+</head>
 
-        <footer></footer>
-        <script src="script/quiz.js"></script>
-    </body>
+<body>
+    <header>
+        <h1>Quiz</h1>
+    </header>
+
+    <main>
+        <div>
+            <p>Coloque seu nome, escolha um tema e clique em iniciar</p>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="nome">Nome:</label></td>
+                        <td><input type="nome" name="nome" id="nome" maxlength="50" required></td>
+                    </tr>
+                    <tr>
+                        <td>Tema:</td>
+                        <td>
+                            <select name="tema">
+                                <option disabled selected></option>
+                                <option value="HTML">HTML</option>
+                                <option value="CSS">CSS</option>
+                                <option value="JS">JavaScript</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit">Iniciar Quiz</button>
+            </form>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="script/quiz.js"></script>
+</body>
+
 </html>
