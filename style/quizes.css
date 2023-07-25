@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 70px;
+}
+
+.subtitulo1 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-1 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-2 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-3 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-4 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo5 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-5 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo6 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-6 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo7 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-7 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo8 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-8 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo9 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-9 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.subtitulo10 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+#pergunta-10 {
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.codigojs {
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
