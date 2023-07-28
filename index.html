@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
     <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/darkmode.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
 </head>
 
 <body>
+
     <header>
         <h1>Quiz</h1>
     </header>
-
     <main>
         <div class="container">
+        
             <p>Coloque seu nome, escolha um tema e clique em iniciar</p>
             <form>
                 <table class="tabela">
@@ -71,6 +74,29 @@
                 <input type="button" value="Finalizar" onclick="calcularPontuacao()">
             </div>
         </div>
+    
+        <div class="config"> <!--Botão dark mode Check Box-->
+            <input type="checkbox" class="checkbox" id="chk" name="chk">
+        
+            <label class="label" for="chk">
+                <i class="bi bi-moon-fill"></i>
+                <i class="bi bi-brightness-low-fill"></i>
+                <div class="ball"></div>
+            </label>
+
+            <!--Botão Mute/Unmute Check Box-->
+            <!--id para incluir na função no js-->
+            <input type="checkbox" class="checkbox" id="chk1" name="chk1"> 
+
+            <label class="label" for="chk1">
+                <i class="bi bi-volume-mute"></i>
+                <i class="bi bi-volume-up"></i>
+                <!-- o icone de volume mutado aparece quando o som está mutado -->
+                <!-- o icone de volume ativado aparece quando ta ativado-->
+                <div class="ball"></div>
+            </label>
+
+        </div>
     </main>
 
     <footer></footer>
@@ -78,7 +104,7 @@
     <script src="script/quiz1.js"></script>
     <script src="script/quiz2.js"></script>
     <script src="script/quiz3.js"></script>
-    
+    <script src="script/darkmode.js"></script>
 
 </body>
 
