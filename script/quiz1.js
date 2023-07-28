@@ -141,3 +141,4 @@ function calcularPontuacao() {
 
   alert(`Sua pontuação: ${pontuacao}/${quiz.length}`);
 }
+
