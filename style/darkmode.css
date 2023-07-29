@@ -8,10 +8,9 @@ background: linear-gradient(0deg, rgba(34,193,195,0.9906337535014006) 0%, rgba(8
 }
 
 body.dark {
-    background: rgb(66,86,102);
-background: linear-gradient(0deg, rgba(66,86,102,1) 15%, rgba(60,81,101,1) 54%, rgba(8,7,1,1) 91%);
+    background: rgb(55,70,83);
+background: linear-gradient(0deg, rgba(55,70,83,1) 10%, rgba(56,71,85,1) 25%, rgba(61,80,98,1) 36%, rgba(54,68,82,1) 60%, rgba(8,7,1,1) 91%);
 color: white;
-
 }
 
 .config {
