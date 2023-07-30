@@ -1,4 +1,4 @@
-const quiz = [
+const quiz3 = [
     {
         pergunta: 'Qual dos seguintes métodos é usado para exibir uma mensagem de alerta na tela do usuário?',
         respostas: {
@@ -107,44 +107,3 @@ const quiz = [
         respostaCorreta: "b"
     },
 ];
-
-// Função para gerar as questões no HTML
-function gerarQuestoes() {
-    const perguntas = document.getElementById("containerPerguntas");
-
-    quiz.forEach((questao, index) => {
-        const div = document.createElement("div");
-        div.innerHTML = `<h3>${index + 1}. ${questao.pergunta}</h3>`;
-
-        for (let opcao in questao.respostas) {
-            div.innerHTML += `
-                <label>
-                    <input type="radio" name="pergunta${index}" value="${opcao}">
-                    ${questao.respostas[opcao]}
-                </label><br>
-            `;
-        }
-
-        div.innerHTML += '<br>';
-        perguntas.appendChild(div);
-    });
-}
-
-gerarQuestoes();
-
-// Função para calcular a pontuação total
-function calcularPontuacao() {
-    let pontuacao = 0;
-
-    quiz.forEach((questao, index) => {
-        const opcoes = document.getElementsByName(`pergunta${index}`);
-
-        opcoes.forEach(opcao => {
-            if (opcao.checked && opcao.value === questao.respostaCorreta) {
-                pontuacao++;
-            }
-        });
-    });
-
-    alert(`Sua pontuação: ${pontuacao}/${quiz.length}`);
-}

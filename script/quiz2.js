@@ -1,4 +1,4 @@
-const quiz = [
+const quiz2 = [
     {
         pergunta: 'Qual propriedade CSS é usada para adicionar margem interna (espaço interno) a um elemento?',
         respostas: {
@@ -101,43 +101,3 @@ const quiz = [
     },
   ];
   
-  // Função para gerar as questões no HTML
-  function gerarQuestoes() { 
-    const perguntas = document.getElementById("containerPerguntas");
-  
-    quiz.forEach((questao, index) => {
-        const div = document.createElement("div");
-        div.innerHTML = `<h3>${index + 1}. ${questao.pergunta}</h3>`;
-        
-        for (let opcao in questao.respostas) {
-            div.innerHTML += `
-                <label>
-                    <input type="radio" name="pergunta${index}" value="${opcao}">
-                    ${questao.respostas[opcao]}
-                </label><br>
-            `;
-        }
-  
-        div.innerHTML += '<br>';
-        perguntas.appendChild(div);
-    });
-  }
-  
-  gerarQuestoes();
-  
-  // Função para calcular a pontuação total
-  function calcularPontuacao() {
-    let pontuacao = 0;
-  
-    quiz.forEach((questao, index) => {
-        const opcoes = document.getElementsByName(`pergunta${index}`);
-        
-        opcoes.forEach(opcao => {
-            if (opcao.checked && opcao.value === questao.respostaCorreta) {
-                pontuacao++;
-            }
-        });
-    });
-  
-    alert(`Sua pontuação: ${pontuacao}/${quiz.length}`);
-  }
