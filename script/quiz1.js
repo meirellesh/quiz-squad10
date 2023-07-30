@@ -1,4 +1,4 @@
-const quiz = [
+const quiz1 = [
   {
       pergunta: 'Como criar um hyperlink que abra o link em uma nova janela do navegador?',
       respostas: {
@@ -100,45 +100,4 @@ const quiz = [
     respostaCorreta: "d"
   },
 ];
-
-// Função para gerar as questões no HTML
-function gerarQuestoes() { 
-  const perguntas = document.getElementById("containerPerguntas");
-
-  quiz.forEach((questao, index) => {
-      const div = document.createElement("div");
-      div.innerHTML = `<h3>${index + 1}. ${questao.pergunta}</h3>`;
-      
-      for (let opcao in questao.respostas) {
-          div.innerHTML += `
-              <label>
-                  <input type="radio" name="pergunta${index}" value="${opcao}">
-                  ${questao.respostas[opcao]}
-              </label><br>
-          `;
-      }
-
-      div.innerHTML += '<br>';
-      perguntas.appendChild(div);
-  });
-}
-
-gerarQuestoes();
-
-// Função para calcular a pontuação total
-function calcularPontuacao() {
-  let pontuacao = 0;
-
-  quiz.forEach((questao, index) => {
-      const opcoes = document.getElementsByName(`pergunta${index}`);
-      
-      opcoes.forEach(opcao => {
-          if (opcao.checked && opcao.value === questao.respostaCorreta) {
-              pontuacao++;
-          }
-      });
-  });
-
-  alert(`Sua pontuação: ${pontuacao}/${quiz.length}`);
-}
 
