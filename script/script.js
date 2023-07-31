@@ -106,6 +106,9 @@ btnFinalizarHTML.onclick = () => {
     });
 
     exibirResultadosNaTabela();
+    atualizarRanking(0, resultados1.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
+    gerarRanking();   
+    
 
     // alert(`Sua pontuação: ${pontuacao}/${quiz1.length}`);
     escolhaTema.hidden = true;
@@ -115,7 +118,6 @@ btnFinalizarHTML.onclick = () => {
     cronometro.hidden = true;
     resultados.hidden = false;
     stop();
-
 };
 
 btnFinalizarCSS.onclick = () => {
@@ -141,7 +143,10 @@ btnFinalizarCSS.onclick = () => {
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
 
-    exibirResultadosNaTabela();
+    exibirResultadosNaTabela();    
+    atualizarRanking(1, resultados2.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
+    gerarRanking();
+    
 
     // alert(`Sua pontuação: ${pontuacao}/${quiz2.length}`);
     escolhaTema.hidden = true;
@@ -177,6 +182,8 @@ btnFinalizarJS.onclick = () => {
     });
 
     exibirResultadosNaTabela();
+    atualizarRanking(2, resultados3.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
+    gerarRanking();   
 
     // alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
     escolhaTema.hidden = true;
@@ -186,6 +193,10 @@ btnFinalizarJS.onclick = () => {
     cronometro.hidden = true;
     resultados.hidden = false;
     stop();
+   
 };
 
 
+
+  
+  
