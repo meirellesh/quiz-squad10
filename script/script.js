@@ -9,19 +9,22 @@ const btnFinalizarCSS = document.querySelector("#finalizarCSS");
 const btnFinalizarJS = document.querySelector("#finalizarJS");
 
 
-
-
 btnEscolha.onclick = () => {
-    escolhaTema.hidden = true;
+    const nome = document.getElementById("nome").value;
     const temaSelecionado = document.getElementById("tema").value;
+
+    if (!nome || !temaSelecionado) {
+        alert ("Por favor, preencha todos os campos para iniciar o Quiz.");
+        return;
+    }
+
+    escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
     quizJS.hidden = true;
-    
 
     if (temaSelecionado === "HTML") {
         quizHTML.hidden = false;
-        
     } else if (temaSelecionado === "CSS") {
         quizCSS.hidden = false;
     } else if (temaSelecionado === "JavaScript") {
@@ -76,6 +79,7 @@ function gerarQuestoes(temaSelecionado) {
 }
 
 btnFinalizarHTML.onclick = () => {
+    const nome = document.getElementById("nome").value;
     let pontuacao = 0;
 
     quiz1.forEach((questao, index) => {
@@ -88,15 +92,28 @@ btnFinalizarHTML.onclick = () => {
         });
     });
 
-    alert(`Sua pontuação: ${pontuacao}/${quiz1.length}`);
-    escolhaTema.hidden = false;
+    resultados1.push({
+        nome: nome,
+        tema: 'HTML',
+        tempo: document.getElementById('counter').innerText,
+        data: new Date().toLocaleDateString(),
+        pontuacao: `${pontuacao}/${quiz1.length}`,
+    });
+
+    exibirResultadosNaTabela();
+
+    // alert(`Sua pontuação: ${pontuacao}/${quiz1.length}`);
+    escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
     quizJS.hidden = true;
+    resultados.hidden = false;
     stop();
+
 };
 
 btnFinalizarCSS.onclick = () => {
+    const nome = document.getElementById("nome").value;
     let pontuacao = 0;
 
     quiz2.forEach((questao, index) => {
@@ -109,15 +126,27 @@ btnFinalizarCSS.onclick = () => {
         });
     });
 
-    alert(`Sua pontuação: ${pontuacao}/${quiz2.length}`);
-    escolhaTema.hidden = false;
+    resultados2.push({
+        nome: nome,
+        tema: 'CSS',
+        tempo: document.getElementById('counter').innerText,
+        data: new Date().toLocaleDateString(),
+        pontuacao: `${pontuacao}/${quiz1.length}`,
+    });
+
+    exibirResultadosNaTabela();
+
+    // alert(`Sua pontuação: ${pontuacao}/${quiz2.length}`);
+    escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
     quizJS.hidden = true;
+    resultados.hidden = false;
     stop();
 };
 
 btnFinalizarJS.onclick = () => {
+    const nome = document.getElementById("nome").value;
     let pontuacao = 0;
 
     quiz3.forEach((questao, index) => {
@@ -130,11 +159,23 @@ btnFinalizarJS.onclick = () => {
         });
     });
 
-    alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
+    resultados3.push({
+        nome: nome,
+        tema: 'JavaScript',
+        tempo: document.getElementById('counter').innerText,
+        data: new Date().toLocaleDateString(),
+        pontuacao: `${pontuacao}/${quiz1.length}`,
+    });
 
-    escolhaTema.hidden = false;
+    exibirResultadosNaTabela();
+
+    // alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
+    escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
     quizJS.hidden = true;
+    resultados.hidden = false;
     stop();
 };
+
+
