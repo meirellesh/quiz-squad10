@@ -13,41 +13,23 @@ function exibirResultadosNaTabela() {
 
   tbody.innerHTML = '';
 
-  resultados1.forEach((resultado) => {
+  const totalResultados = [...resultados1, ...resultados2, ...resultados3];
+
+  totalResultados.sort((a, b) => new Date(b.data).getTime() - new Date(a.data).getTime());
+
+  totalResultados.forEach((resultado) => {
+    const dataFormatada =  new Date(resultado.data).toLocaleDateString();
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${resultado.nome}</td>
       <td>${resultado.tema}</td>
       <td>${resultado.tempo}</td>
-      <td>${resultado.data}</td>
+      <td>${dataFormatada}</td>
       <td>${resultado.pontuacao}</td>
     `;
     tbody.appendChild(tr);
   });
 
-  resultados2.forEach((resultado) => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td>${resultado.nome}</td>
-      <td>${resultado.tema}</td>
-      <td>${resultado.tempo}</td>
-      <td>${resultado.data}</td>
-      <td>${resultado.pontuacao}</td>
-    `;
-    tbody.appendChild(tr);
-  });
-
-  resultados3.forEach((resultado) => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td>${resultado.nome}</td>
-      <td>${resultado.tema}</td>
-      <td>${resultado.tempo}</td>
-      <td>${resultado.data}</td>
-      <td>${resultado.pontuacao}</td>
-    `;
-    tbody.appendChild(tr);
-  });
 }
 
 
