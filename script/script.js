@@ -97,6 +97,7 @@ btnFinalizarHTML.onclick = () => {
         tema: 'HTML',
         tempo: document.getElementById('counter').innerText,
         data: new Date().toISOString(),
+        hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
 
@@ -131,6 +132,7 @@ btnFinalizarCSS.onclick = () => {
         tema: 'CSS',
         tempo: document.getElementById('counter').innerText,
         data: new Date().toISOString(),
+        hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
 
@@ -164,6 +166,7 @@ btnFinalizarJS.onclick = () => {
         tema: 'JavaScript',
         tempo: document.getElementById('counter').innerText,
         data: new Date().toISOString(),
+        hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
 

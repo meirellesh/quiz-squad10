@@ -19,12 +19,14 @@ function exibirResultadosNaTabela() {
 
   totalResultados.forEach((resultado) => {
     const dataFormatada =  new Date(resultado.data).toLocaleDateString();
+    const horaFormatada =  new Date(resultado.data).toLocaleTimeString();
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${resultado.nome}</td>
       <td>${resultado.tema}</td>
       <td>${resultado.tempo}</td>
       <td>${dataFormatada}</td>
+      <td>${horaFormatada}</td>
       <td>${resultado.pontuacao}</td>
     `;
     tbody.appendChild(tr);
