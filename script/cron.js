@@ -22,7 +22,7 @@ function stop() {
     mm = 0;
     ss = 0;
 
-    document.getElementById('counter').innerText = "Timer: " + '00:00:00';
+    document.getElementById('counter').innerText = '00:00:00';
 }
 
 //Faz a contagem do tempo e exibição
@@ -40,7 +40,7 @@ function timer() {
     }
 
     //Cria uma variável com o valor tratado HH:MM:SS
-    var format = "Timer: " + (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+    var format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
     
     //Insere o valor tratado no elemento counter
     document.getElementById('counter').innerText = format;
