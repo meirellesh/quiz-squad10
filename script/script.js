@@ -96,7 +96,7 @@ btnFinalizarHTML.onclick = () => {
         nome: nome,
         tema: 'HTML',
         tempo: document.getElementById('counter').innerText,
-        data: new Date().toLocaleDateString(),
+        data: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
 
@@ -130,7 +130,7 @@ btnFinalizarCSS.onclick = () => {
         nome: nome,
         tema: 'CSS',
         tempo: document.getElementById('counter').innerText,
-        data: new Date().toLocaleDateString(),
+        data: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
 
@@ -163,7 +163,7 @@ btnFinalizarJS.onclick = () => {
         nome: nome,
         tema: 'JavaScript',
         tempo: document.getElementById('counter').innerText,
-        data: new Date().toLocaleDateString(),
+        data: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
 
