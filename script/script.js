@@ -4,6 +4,8 @@ const btnEscolha = document.querySelector("#btnEscolha");
 const quizHTML = document.querySelector("#quizHTML");
 const quizCSS = document.querySelector("#quizCSS");
 const quizJS = document.querySelector("#quizJS");
+const cronometro = document.querySelector("#cronometro")
+const resultados = document.querySelector("#resultados")
 const btnFinalizarHTML = document.querySelector("#finalizarHTML");
 const btnFinalizarCSS = document.querySelector("#finalizarCSS");
 const btnFinalizarJS = document.querySelector("#finalizarJS");
@@ -22,6 +24,7 @@ btnEscolha.onclick = () => {
     quizHTML.hidden = true;
     quizCSS.hidden = true;
     quizJS.hidden = true;
+    cronometro.hidden = true;
 
     if (temaSelecionado === "HTML") {
         quizHTML.hidden = false;
@@ -36,8 +39,9 @@ btnEscolha.onclick = () => {
 };
 
 
-// Função para gerar as questões no HTML
+// Função para gerar as questões
 function gerarQuestoes(temaSelecionado) {
+    cronometro.hidden = false;
     const perguntasContainer = document.getElementById(
         `containerPerguntas${temaSelecionado}`
     );
@@ -108,6 +112,7 @@ btnFinalizarHTML.onclick = () => {
     quizHTML.hidden = true;
     quizCSS.hidden = true;
     quizJS.hidden = true;
+    cronometro.hidden = true;
     resultados.hidden = false;
     stop();
 
@@ -143,6 +148,7 @@ btnFinalizarCSS.onclick = () => {
     quizHTML.hidden = true;
     quizCSS.hidden = true;
     quizJS.hidden = true;
+    cronometro.hidden = true;
     resultados.hidden = false;
     stop();
 };
@@ -177,6 +183,7 @@ btnFinalizarJS.onclick = () => {
     quizHTML.hidden = true;
     quizCSS.hidden = true;
     quizJS.hidden = true;
+    cronometro.hidden = true;
     resultados.hidden = false;
     stop();
 };
