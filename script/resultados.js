@@ -49,6 +49,7 @@ function exibirResultadosNaTabela() {
     tbody.appendChild(tr);
   });
 }
+ 
 
 
 
