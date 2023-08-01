@@ -143,7 +143,7 @@ btnFinalizarCSS.onclick = () => {
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
 
-    exibirResultadosNaTabela();    
+    exibirResultadosNaTabela(); 
     atualizarRanking(1, resultados2.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();
     
@@ -180,6 +180,7 @@ btnFinalizarJS.onclick = () => {
         hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
+
 
     exibirResultadosNaTabela();
     atualizarRanking(2, resultados3.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
