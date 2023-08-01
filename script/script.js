@@ -1,4 +1,3 @@
-
 const escolhaTema = document.getElementById("escolhaTema");
 const btnEscolha = document.querySelector("#btnEscolha");
 const quizHTML = document.querySelector("#quizHTML");
@@ -29,6 +28,7 @@ btnEscolha.onclick = () => {
     quizCSS.hidden = true;
     quizJS.hidden = true;
     cronometro.hidden = true;
+    resultados.hidden = true;
 
     if (temaSelecionado === "HTML") {
         quizHTML.hidden = false;
@@ -109,14 +109,8 @@ btnFinalizarHTML.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(
-        0,
-        resultados1.map((resultado) => ({
-            ...resultado,
-            pontuacao: parseInt(resultado.pontuacao),
-        }))
-    );
+    // calcularMedia([...resultados1, ...resultados2, ...resultados3]);
+    atualizarRanking(0, resultados1.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();
 
     // alert(`Sua pontuação: ${pontuacao}/${quiz1.length}`);
@@ -153,14 +147,8 @@ btnFinalizarCSS.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(
-        1,
-        resultados2.map((resultado) => ({
-            ...resultado,
-            pontuacao: parseInt(resultado.pontuacao),
-        }))
-    );
+    // calcularMedia([...resultados1, ...resultados2, ...resultados3]);
+    atualizarRanking(1, resultados2.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();
 
     // alert(`Sua pontuação: ${pontuacao}/${quiz2.length}`);
@@ -197,17 +185,11 @@ btnFinalizarJS.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(
-        2,
-        resultados3.map((resultado) => ({
-            ...resultado,
-            pontuacao: parseInt(resultado.pontuacao),
-        }))
-    );
+    // calcularMedia([...resultados1, ...resultados2, ...resultados3]);
+    atualizarRanking(2, resultados3.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();
 
-    alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
+    // alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
@@ -222,6 +204,19 @@ function play() {
     player.loop = true;
     button.textContent = "Pause";
 }
+
+function pause() {
+    player.pause();
+    button.textContent = "Play";
+}
+
+button.addEventListener("click", function () {
+    if (player.paused) {
+        play();
+    } else {
+        pause();
+    }
+});
 
 btnReiniciar.forEach((btn) => {
     btn.onclick = () => {
@@ -238,15 +233,3 @@ btnReiniciar.forEach((btn) => {
     };
 });
 
-function pause() {
-    player.pause();
-    button.textContent = "Play";
-}
-
-button.addEventListener("click", function () {
-    if (player.paused) {
-        play();
-    } else {
-        pause();
-    }
-});
