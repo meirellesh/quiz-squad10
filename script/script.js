@@ -106,6 +106,7 @@ btnFinalizarHTML.onclick = () => {
     });
 
     exibirResultadosNaTabela();
+    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
     atualizarRanking(0, resultados1.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();   
     
@@ -144,6 +145,7 @@ btnFinalizarCSS.onclick = () => {
     });
 
     exibirResultadosNaTabela(); 
+    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
     atualizarRanking(1, resultados2.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();
     
@@ -183,6 +185,7 @@ btnFinalizarJS.onclick = () => {
 
 
     exibirResultadosNaTabela();
+    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
     atualizarRanking(2, resultados3.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();   
 
