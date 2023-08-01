@@ -229,7 +229,7 @@ btnReiniciar.forEach((btn) => {
         resultados.hidden = true;
         stop();
     };
-});
+
 
 function play() {
     player.play();
