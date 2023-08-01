@@ -4,25 +4,23 @@ const btnEscolha = document.querySelector("#btnEscolha");
 const quizHTML = document.querySelector("#quizHTML");
 const quizCSS = document.querySelector("#quizCSS");
 const quizJS = document.querySelector("#quizJS");
-const cronometro = document.querySelector("#cronometro")
-const resultados = document.querySelector("#resultados")
+const cronometro = document.querySelector("#cronometro");
+const resultados = document.querySelector("#resultados");
 const btnFinalizarHTML = document.querySelector("#finalizarHTML");
 const btnFinalizarCSS = document.querySelector("#finalizarCSS");
 const btnFinalizarJS = document.querySelector("#finalizarJS");
 
-const player = document.getElementById('player'); // tag audio
-const button = document.getElementById('play'); // botão play/pause
+const player = document.getElementById("player"); // tag audio
+const button = document.getElementById("play"); // botão play/pause
 
-
-const btnReiniciar = document.querySelectorAll(".reiniciar")
-
+const btnReiniciar = document.querySelectorAll(".reiniciar");
 
 btnEscolha.onclick = () => {
     const nome = document.getElementById("nome").value;
     const temaSelecionado = document.getElementById("tema").value;
 
     if (!nome || !temaSelecionado) {
-        alert ("Por favor, preencha todos os campos para iniciar o Quiz.");
+        alert("Por favor, preencha todos os campos para iniciar o Quiz.");
         return;
     }
 
@@ -43,7 +41,6 @@ btnEscolha.onclick = () => {
     gerarQuestoes(temaSelecionado);
     start();
 };
-
 
 // Função para gerar as questões
 function gerarQuestoes(temaSelecionado) {
@@ -104,8 +101,8 @@ btnFinalizarHTML.onclick = () => {
 
     resultados1.push({
         nome: nome,
-        tema: 'HTML',
-        tempo: document.getElementById('counter').innerText,
+        tema: "HTML",
+        tempo: document.getElementById("counter").innerText,
         data: new Date().toISOString(),
         hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
@@ -113,9 +110,14 @@ btnFinalizarHTML.onclick = () => {
 
     exibirResultadosNaTabela();
     calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(0, resultados1.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
-    gerarRanking();   
-    
+    atualizarRanking(
+        0,
+        resultados1.map((resultado) => ({
+            ...resultado,
+            pontuacao: parseInt(resultado.pontuacao),
+        }))
+    );
+    gerarRanking();
 
     // alert(`Sua pontuação: ${pontuacao}/${quiz1.length}`);
     escolhaTema.hidden = true;
@@ -143,18 +145,23 @@ btnFinalizarCSS.onclick = () => {
 
     resultados2.push({
         nome: nome,
-        tema: 'CSS',
-        tempo: document.getElementById('counter').innerText,
+        tema: "CSS",
+        tempo: document.getElementById("counter").innerText,
         data: new Date().toISOString(),
         hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz2.length}`,
     });
 
-    exibirResultadosNaTabela(); 
+    exibirResultadosNaTabela();
     calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(1, resultados2.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
+    atualizarRanking(
+        1,
+        resultados2.map((resultado) => ({
+            ...resultado,
+            pontuacao: parseInt(resultado.pontuacao),
+        }))
+    );
     gerarRanking();
-    
 
     // alert(`Sua pontuação: ${pontuacao}/${quiz2.length}`);
     escolhaTema.hidden = true;
@@ -182,8 +189,8 @@ btnFinalizarJS.onclick = () => {
 
     resultados3.push({
         nome: nome,
-        tema: 'JavaScript',
-        tempo: document.getElementById('counter').innerText,
+        tema: "JavaScript",
+        tempo: document.getElementById("counter").innerText,
         data: new Date().toISOString(),
         hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz3.length}`,
@@ -191,8 +198,14 @@ btnFinalizarJS.onclick = () => {
 
     exibirResultadosNaTabela();
     calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(2, resultados3.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
-    gerarRanking();   
+    atualizarRanking(
+        2,
+        resultados3.map((resultado) => ({
+            ...resultado,
+            pontuacao: parseInt(resultado.pontuacao),
+        }))
+    );
+    gerarRanking();
 
     alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
     escolhaTema.hidden = true;
@@ -202,10 +215,8 @@ btnFinalizarJS.onclick = () => {
     cronometro.hidden = true;
     resultados.hidden = false;
     stop();
-   
 };
-
-
+//Botão musica
 function play() {
     player.play();
     player.loop = true;
@@ -214,10 +225,9 @@ function play() {
 
 btnReiniciar.forEach((btn) => {
     btn.onclick = () => {
-
         document.getElementById("nome").value = "";
         document.getElementById("tema").value = "";
-    
+
         escolhaTema.hidden = false;
         quizHTML.hidden = true;
         quizCSS.hidden = true;
@@ -226,26 +236,17 @@ btnReiniciar.forEach((btn) => {
         resultados.hidden = true;
         stop();
     };
-
-}); 
-
-
-
-
+});
 
 function pause() {
     player.pause();
     button.textContent = "Play";
 }
 
-button.addEventListener('click', function(){
+button.addEventListener("click", function () {
     if (player.paused) {
         play();
     } else {
         pause();
     }
 });
-
-  
-  
-
