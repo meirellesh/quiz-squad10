@@ -229,7 +229,7 @@ btnReiniciar.forEach((btn) => {
 
 }); 
 
-});
+
 
 
 
