@@ -1,4 +1,4 @@
-// Função para calcular a média
+/*// Função para calcular a média
 function calcularMedia(array) {
     const soma = array.reduce((acumulador, valor) => acumulador + valor, 0);
     return soma / array.length;
@@ -26,4 +26,4 @@ const mediaErros = 10 - mediaAcertos;
 const mediaAcertosSpan = document.getElementById("mediaAcertos");
 const mediaErrosSpan = document.getElementById("mediaErros");
 mediaAcertosSpan.textContent = mediaAcertos.toFixed(1);
-mediaErrosSpan.textContent = mediaErros.toFixed(1);
+mediaErrosSpan.textContent = mediaErros.toFixed(1);*/
