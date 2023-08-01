@@ -9,7 +9,13 @@ const resultados = document.querySelector("#resultados")
 const btnFinalizarHTML = document.querySelector("#finalizarHTML");
 const btnFinalizarCSS = document.querySelector("#finalizarCSS");
 const btnFinalizarJS = document.querySelector("#finalizarJS");
+
+const player = document.getElementById('player'); // tag audio
+const button = document.getElementById('play'); // botão play/pause
+
+
 const btnReiniciar = document.querySelectorAll(".reiniciar")
+
 
 btnEscolha.onclick = () => {
     const nome = document.getElementById("nome").value;
@@ -186,7 +192,7 @@ btnFinalizarJS.onclick = () => {
     atualizarRanking(2, resultados3.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();   
 
-    // alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
+    alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
@@ -196,6 +202,13 @@ btnFinalizarJS.onclick = () => {
     stop();
    
 };
+
+
+function play() {
+    player.play();
+    player.loop = true;
+    button.textContent = "Pause";
+}
 
 btnReiniciar.forEach((btn) => {
     btn.onclick = () => {
@@ -214,6 +227,19 @@ btnReiniciar.forEach((btn) => {
 });
 
 
+
+function pause() {
+    player.pause();
+    button.textContent = "Play";
+}
+
+button.addEventListener('click', function(){
+    if (player.paused) {
+        play();
+    } else {
+        pause();
+    }
+});
 
   
   

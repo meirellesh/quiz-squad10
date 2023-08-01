@@ -1,6 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz</title>
+        <link rel="stylesheet" href="style/main.css" />
+        <link rel="stylesheet" href="style/darkmode.css" />
+        <link rel="stylesheet" href="style/ranking.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+    </head>
 
+    <body>
+        <header>
+            <h1>Quiz</h1>
+        </header>
+        <main>
+            <section id="escolhaTema">
+                <div class="container">
+                    <p>Coloque seu nome, escolha um tema e clique em iniciar</p>
+                    <form>
+                        <table class="tabela">
+                            <tr>
+                                <td><label for="nome">Nome:</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        class="campo"
+                                        type="nome"
+                                        name="nome"
+                                        id="nome"
+                                        maxlength="50"
+                                        required
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tema:</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select class="campo" name="tema" id="tema">
+                                        <option disabled selected></option>
+                                        <option value="HTML">HTML</option>
+                                        <option value="CSS">CSS</option>
+                                        <option value="JavaScript">
+                                            JavaScript
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="campo" type="button" id="btnEscolha">
+                            Iniciar Quiz
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <div id="quizHTML" hidden>
+                <h2 class="titulo">Quiz: HTML</h2>
+                <div>
+                    <form id="formQuiz">
+                        <div id="containerPerguntasHTML"></div>
+                    </form>
+                    <div>
+                        <input
+                            type="button"
+                            value="Reiniciar"
+                            class="reiniciar"
+                        />
+                        <input
+                            type="button"
+                            value="Finalizar"
+                            id="finalizarHTML"
+                        />
+                    </div>
+=======
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -61,9 +140,28 @@
                 <div>
                     <input type="button" value="Reiniciar" class="reiniciar" />
                     <input type="button" value="Finalizar" id="finalizarHTML" />
+
                 </div>
             </div>
-        </div>
+
+            <div id="quizCSS" hidden>
+                <h2 class="titulo">Quiz: CSS</h2>
+                <div>
+                    <form id="formQuiz">
+                        <div id="containerPerguntasCSS"></div>
+                    </form>
+                    <div>
+                        <input
+                            type="button"
+                            value="Reiniciar"
+                            class="reiniciar"
+                        />
+                        <input
+                            type="button"
+                            value="Finalizar"
+                            id="finalizarCSS"
+                        />
+                    </div>
 
         <div id="quizCSS" hidden>
             <h2 class="titulo">Quiz: CSS</h2>
@@ -74,9 +172,29 @@
                 <div>
                     <input type="button" value="Reiniciar" class="reiniciar" />
                     <input type="button" value="Finalizar" id="finalizarCSS" />
+
                 </div>
             </div>
-        </div>
+
+
+            <div id="quizJS" hidden>
+                <h2 class="titulo">Quiz: JavaScript</h2>
+                <div>
+                    <form id="formQuiz">
+                        <div id="containerPerguntasJavaScript"></div>
+                    </form>
+                    <div>
+                        <input
+                            type="button"
+                            value="Reiniciar"
+                            class="reiniciar"
+                        />
+                        <input
+                            type="button"
+                            value="Finalizar"
+                            id="finalizarJS"
+                        />
+                    </div>
 
         <div id="quizJS" hidden>
             <h2 class="titulo">Quiz: JavaScript</h2>
@@ -87,23 +205,42 @@
                 <div>
                     <input type="button" value="Reiniciar" class="reiniciar" />
                     <input type="button" value="Finalizar" id="finalizarJS" />
+
                 </div>
             </div>
-        </div>
 
-        <!--Botão dark mode Check Box-->
-        <div class="config">
-            <input type="checkbox" class="checkbox" id="chk" name="chk" />
+            <!--Botão dark mode Check Box-->
+            <div class="config">
+                <input type="checkbox" class="checkbox" id="chk" name="chk" />
 
-            <label class="label" for="chk">
-                <i class="bi bi-moon-fill"></i>
-                <i class="bi bi-brightness-low-fill"></i>
-                <div class="ball"></div>
-            </label>
+                <label class="label" for="chk">
+                    <i class="bi bi-moon-fill"></i>
+                    <i class="bi bi-brightness-low-fill"></i>
+                    <div class="ball"></div>
+                </label>
 
-            <!--Botão Mute/Unmute Check Box-->
-            <!--id para incluir na função no js-->
-            <input type="checkbox" class="checkbox" id="chk1" name="chk1" />
+                <!--Botão Mute/Unmute Check Box-->
+                <!--id para incluir na função no js-->
+                <input type="checkbox" class="checkbox" id="play" name="play" />
+
+
+                <label class="label" for="play">
+                    <i class="bi bi-volume-mute"></i>
+                    <i class="bi bi-volume-up"></i>
+                    
+                    
+                    
+                    <audio
+                        src="/musicas/SnapInsta.io - 5 MINUTES OF (No Copyright Music) CHILL LOFI HIP HOP BEAT (Royalty free) (320 kbps).mp3"
+                        id="player"
+                    ></audio>
+                    <!-- o icone de volume mutado aparece quando o som está mutado -->
+                    <!-- o icone de volume ativado aparece quando ta ativado-->
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="cronometro" id="cronometro" hidden>
+                <table>
 
             <label class="label" for="chk1">
                 <i class="bi bi-volume-mute"></i>
@@ -125,14 +262,41 @@
             <div>
             <table id="tabelaResultados">
                 <thead>
+
                     <tr>
-                        <th>Nome</th>
-                        <th>Tema</th>
-                        <th>Tempo</th>
-                        <th>Data</th>
-                        <th>Hora</th>
-                        <th>Pontuação</th>
+                        <td>Timer:</td>
+                        <td id="counter">00:00:00</td>
                     </tr>
+
+                </table>
+            </div>
+            <div id="resultados" hidden>
+                <div>
+                    <table id="tabelaResultados">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Tema</th>
+                                <th>Tempo</th>
+                                <th>Data</th>
+                                <th>Hora</th>
+                                <th>Pontuação</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="rank">
+                    <table id="table-content"></table>
+                </div>
+                <div>
+                    <input type="button" value="Reiniciar" class="reiniciar" />
+                </div>
+            </div>
+        </main>
+
+        <footer></footer>
+
                 </thead>
                 <tbody></tbody>
             </table>
@@ -159,4 +323,13 @@
     <script src="script/ranking.js"></script>
 </body>
 
+        <script src="script/script.js"></script>
+        <script src="script/quiz1.js"></script>
+        <script src="script/quiz2.js"></script>
+        <script src="script/quiz3.js"></script>
+        <script src="script/darkmode.js"></script>
+        <script src="script/cron.js"></script>
+        <script src="script/resultados.js"></script>
+        <script src="script/ranking.js"></script>
+    </body>
 </html>
