@@ -216,12 +216,6 @@ btnFinalizarJS.onclick = () => {
     stop();
 };
 
-function play() {
-    player.play();
-    player.loop = true;
-    button.textContent = "Pause";
-}
-
 btnReiniciar.forEach((btn) => {
     btn.onclick = () => {
         document.getElementById("nome").value = "";
@@ -237,6 +231,11 @@ btnReiniciar.forEach((btn) => {
     };
 });
 
+function play() {
+    player.play();
+    player.loop = true;
+    button.textContent = "Pause";
+}
 function pause() {
     player.pause();
     button.textContent = "Play";
