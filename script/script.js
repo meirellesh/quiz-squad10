@@ -9,7 +9,7 @@ const resultados = document.querySelector("#resultados")
 const btnFinalizarHTML = document.querySelector("#finalizarHTML");
 const btnFinalizarCSS = document.querySelector("#finalizarCSS");
 const btnFinalizarJS = document.querySelector("#finalizarJS");
-
+const btnReiniciar = document.querySelectorAll(".reiniciar")
 
 btnEscolha.onclick = () => {
     const nome = document.getElementById("nome").value;
@@ -140,7 +140,7 @@ btnFinalizarCSS.onclick = () => {
         tempo: document.getElementById('counter').innerText,
         data: new Date().toISOString(),
         hora: new Date().toISOString(),
-        pontuacao: `${pontuacao}/${quiz1.length}`,
+        pontuacao: `${pontuacao}/${quiz2.length}`,
     });
 
     exibirResultadosNaTabela();    
@@ -178,7 +178,7 @@ btnFinalizarJS.onclick = () => {
         tempo: document.getElementById('counter').innerText,
         data: new Date().toISOString(),
         hora: new Date().toISOString(),
-        pontuacao: `${pontuacao}/${quiz1.length}`,
+        pontuacao: `${pontuacao}/${quiz3.length}`,
     });
 
     exibirResultadosNaTabela();
@@ -195,6 +195,22 @@ btnFinalizarJS.onclick = () => {
     stop();
    
 };
+
+btnReiniciar.forEach((btn) => {
+    btn.onclick = () => {
+
+        document.getElementById("nome").value = "";
+        document.getElementById("tema").value = "";
+    
+        escolhaTema.hidden = false;
+        quizHTML.hidden = true;
+        quizCSS.hidden = true;
+        quizJS.hidden = true;
+        cronometro.hidden = true;
+        resultados.hidden = true;
+        stop();
+    };
+});
 
 
 

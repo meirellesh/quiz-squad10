@@ -57,7 +57,10 @@
                 <form id="formQuiz">
                     <div id="containerPerguntasHTML"></div>
                 </form>
-                <input type="button" value="Finalizar" id="finalizarHTML" />
+                <div>
+                    <input type="button" value="Reiniciar" class="reiniciar" />
+                    <input type="button" value="Finalizar" id="finalizarHTML" />
+                </div>
             </div>
         </div>
 
@@ -67,7 +70,10 @@
                 <form id="formQuiz">
                     <div id="containerPerguntasCSS"></div>
                 </form>
-                <input type="button" value="Finalizar" id="finalizarCSS" />
+                <div>
+                    <input type="button" value="Reiniciar" class="reiniciar" />
+                    <input type="button" value="Finalizar" id="finalizarCSS" />
+                </div>
             </div>
         </div>
 
@@ -77,7 +83,10 @@
                 <form id="formQuiz">
                     <div id="containerPerguntasJavaScript"></div>
                 </form>
-                <input type="button" value="Finalizar" id="finalizarJS" />
+                <div>
+                    <input type="button" value="Reiniciar" class="reiniciar" />
+                    <input type="button" value="Finalizar" id="finalizarJS" />
+                </div>
             </div>
         </div>
 
@@ -106,12 +115,13 @@
         <div class="cronometro" id="cronometro" hidden>
             <table>
                 <tr>
-                    <td>Timer: </td>
+                    <td>Timer:</td>
                     <td id="counter">00:00:00</td>
                 </tr>
             </table>
         </div>
         <div id="resultados" hidden>
+            <div>
             <table id="tabelaResultados">
                 <thead>
                     <tr>
@@ -123,20 +133,21 @@
                         <th>Pontuação</th>
                     </tr>
                 </thead>
-                <tbody>
-
-                </tbody>
+                <tbody></tbody>
             </table>
+            </div>
+            <div id="rank">
+                <table id="table-content"></table>
+            </div>
+            <div>
+                <input type="button" value="Reiniciar" class="reiniciar" />
+            </div>
         </div>
-        <div id="rank">
-            <table id="table-content">
-                
-            </table>
-        </div>
+        
     </main>
 
     <footer></footer>
-    
+
     <script src="script/script.js"></script>
     <script src="script/quiz1.js"></script>
     <script src="script/quiz2.js"></script>
@@ -145,8 +156,6 @@
     <script src="script/cron.js"></script>
     <script src="script/resultados.js"></script>
     <script src="script/ranking.js"></script>
-    
-    
 </body>
 
 </html>
