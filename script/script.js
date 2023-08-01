@@ -181,7 +181,6 @@ btnFinalizarJS.onclick = () => {
         pontuacao: `${pontuacao}/${quiz3.length}`,
     });
 
-
     exibirResultadosNaTabela();
     atualizarRanking(2, resultados3.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();   
@@ -211,9 +210,4 @@ btnReiniciar.forEach((btn) => {
         resultados.hidden = true;
         stop();
     };
-});
-
-
-
-  
-  
+}); 
