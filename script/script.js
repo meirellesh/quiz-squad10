@@ -189,7 +189,6 @@ btnFinalizarJS.onclick = () => {
         pontuacao: `${pontuacao}/${quiz3.length}`,
     });
 
-
     exibirResultadosNaTabela();
     calcularMedia([...resultados1, ...resultados2, ...resultados3]);
     atualizarRanking(2, resultados3.map((resultado) => ({ ...resultado, pontuacao: parseInt(resultado.pontuacao) })));
@@ -227,6 +226,9 @@ btnReiniciar.forEach((btn) => {
         resultados.hidden = true;
         stop();
     };
+
+}); 
+
 });
 
 
@@ -246,3 +248,4 @@ button.addEventListener('click', function(){
 
   
   
+
