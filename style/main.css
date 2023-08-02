@@ -227,8 +227,8 @@ td {
 
 .cronometro{
   position: fixed;
-  top: 0%;
-  right: 0%;
+  top: 1%;
+  left: 1%;
   font-size: 12px;
   border: solid rgba(164, 56, 56, 0.698) 2px;
   padding: 3px;
