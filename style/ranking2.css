@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caprasimo&family=Chela+One&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Mynerve&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Satisfy&display=swap");
 
 :root {
-    --page-backgorund: #a8c2ebf6;
-    
+    --table-backgorund: #d6dadff1;
+    --page-backgorund: #143669;
 }
 
 * {
@@ -23,7 +23,7 @@ header {
 
 .containerResult {
     padding: 60px, 30px;
-    background-color:#8471a3;
+    background-color: #143669;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -35,13 +35,12 @@ header {
 h2 {
     margin-left: 100px;
     margin-bottom: 30px; 
-    color:rgb(153, 255, 0);
-    /* color: #5f1c3e;  #09505e*/
+    color: orangered;
     font-size: 2.75rem;
 }
 
 #tabelaResultados {
-    background-color:rgba(245, 228, 206, 0.250);
+    background-color: rgba(148, 146, 146, 0.250);
     width: 20px ;
     margin-left: 100px;
     padding: 30px;
@@ -63,35 +62,29 @@ td, tr, th {
 }
 
 th {
-    color: rgb(153, 255, 0);
+    color: rgb(7, 16, 44);
     font-weight: bold;
     font-size: 2rem;
 }
 
+
 .reiniciar {
-    width: 150px;
-    height: 70px;
+    width: 10%;
     padding: 12px;
     margin-top: 16px;
     font-size: 1.75rem;
-    color: rgb(37, 36, 36); 
+    color: rgb(7, 16, 44);
     font-weight: bold;
     margin-bottom: 16px;
-    background-color: whitesmoke;
+    background-color: rgba(148, 146, 146, 0.250);
     border-style: double;
-    border-radius: 12%;
+    border-radius: 6%;
     border-width: 4px;
-    border-color: whitesmoke;
+    border-color: orangered;
     cursor: pointer;
     position: fixed;
     bottom: 20px;
     right: 20px;
-}
-
-.reiniciar:hover {
-    color: #fff; 
-    background-color: rgb(153, 255, 0);
-    border-color: rgb(153, 255, 0); 
 }
 
 .config {
@@ -117,7 +110,6 @@ th {
     font-weight: lighter;   
     
 }
-
 
 .medias span {
     margin-right: 50px;
