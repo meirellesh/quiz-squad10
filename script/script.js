@@ -95,12 +95,19 @@ btnFinalizarHTML.onclick = () => {
 
     quiz1.forEach((questao, index) => {
         const opcoes = document.getElementsByName(`pergunta${index}`);
+        const selecionada = Array.from(opcoes).some(opcao => opcao.checked);
 
-        opcoes.forEach((opcao) => {
-            if (opcao.checked && opcao.value === questao.respostaCorreta) {
-                pontuacao++;
-            }
-        });
+        if (selecionada) {
+            const respostaCorreta = questao.respostaCorreta;
+            opcoes.forEach((opcao) => {
+                if (opcao.checked && opcao.value === respostaCorreta) {
+                    pontuacao++;
+                    opcao.parentNode.classList.add("resposta-correta");
+                } else if (opcao.checked) {
+                    opcao.parentNode.classList.add("resposta-incorreta");
+                }
+            });
+        }
     });
 
     resultados1.push({
@@ -117,7 +124,6 @@ btnFinalizarHTML.onclick = () => {
     atualizarRanking(0, resultados1.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();
 
-    // alert(`Sua pontuação: ${pontuacao}/${quiz1.length}`);
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
@@ -133,12 +139,19 @@ btnFinalizarCSS.onclick = () => {
 
     quiz2.forEach((questao, index) => {
         const opcoes = document.getElementsByName(`pergunta${index}`);
+        const selecionada = Array.from(opcoes).some(opcao => opcao.checked);
 
-        opcoes.forEach((opcao) => {
-            if (opcao.checked && opcao.value === questao.respostaCorreta) {
-                pontuacao++;
-            }
-        });
+        if (selecionada) {
+            const respostaCorreta = questao.respostaCorreta;
+            opcoes.forEach((opcao) => {
+                if (opcao.checked && opcao.value === respostaCorreta) {
+                    pontuacao++;
+                    opcao.parentNode.classList.add("resposta-correta");
+                } else if (opcao.checked) {
+                    opcao.parentNode.classList.add("resposta-incorreta");
+                }
+            });
+        }
     });
 
     resultados2.push({
@@ -155,7 +168,6 @@ btnFinalizarCSS.onclick = () => {
     atualizarRanking(1, resultados2.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();
 
-    // alert(`Sua pontuação: ${pontuacao}/${quiz2.length}`);
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
@@ -164,19 +176,25 @@ btnFinalizarCSS.onclick = () => {
     resultados.hidden = false;
     stop();
 };
-
 btnFinalizarJS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
 
     quiz3.forEach((questao, index) => {
         const opcoes = document.getElementsByName(`pergunta${index}`);
+        const selecionada = Array.from(opcoes).some(opcao => opcao.checked);
 
-        opcoes.forEach((opcao) => {
-            if (opcao.checked && opcao.value === questao.respostaCorreta) {
-                pontuacao++;
-            }
-        });
+        if (selecionada) {
+            const respostaCorreta = questao.respostaCorreta;
+            opcoes.forEach((opcao) => {
+                if (opcao.checked && opcao.value === respostaCorreta) {
+                    pontuacao++;
+                    opcao.parentNode.classList.add("resposta-correta");
+                } else if (opcao.checked) {
+                    opcao.parentNode.classList.add("resposta-incorreta");
+                }
+            });
+        }
     });
 
     resultados3.push({
@@ -193,7 +211,6 @@ btnFinalizarJS.onclick = () => {
     atualizarRanking(2, resultados3.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     gerarRanking();
 
-    // alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
