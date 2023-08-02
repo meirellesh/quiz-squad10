@@ -2,6 +2,7 @@ const resultados1 = [];
 const resultados2 = [];
 const resultados3 = [];
 
+// Função para gerar Tabela de Resultados
 function exibirResultadosNaTabela() {
   const tabelaResultados = document.getElementById('tabelaResultados');
   const tbody = tabelaResultados.querySelector('tbody');
@@ -137,6 +138,3 @@ function exibirRanking(temaMatriz, resultados) {
   }
   gerarRanking();
 }
-
-
-
