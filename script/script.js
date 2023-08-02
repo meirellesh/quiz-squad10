@@ -9,14 +9,17 @@ const quizCSS = document.querySelector("#quizCSS");
 const quizJS = document.querySelector("#quizJS");
 const cronometro = document.querySelector("#cronometro");
 const resultados = document.querySelector("#resultados");
-const btnFinalizarHTML = document.querySelector("#finalizarHTML");
-const btnFinalizarCSS = document.querySelector("#finalizarCSS");
-const btnFinalizarJS = document.querySelector("#finalizarJS");
+const btnFinalizarHTML = document.getElementById("finalizarHTML")
+const btnFinalizarCSS = document.getElementById("finalizarCSS")
+const btnFinalizarJS = document.getElementById("finalizarJS")
+const btnResultadoHTML = document.querySelector("#resultadoHTML");
+const btnResultadoCSS = document.querySelector("#resultadoCSS");
+const btnResultadoJS = document.querySelector("#resultadoJS");
+const btnReiniciar = document.querySelectorAll(".reiniciar");
+const btnReiniciarFinal = document.getElementById("reiniciarFinal")
 
 const player = document.getElementById("player"); // tag audio
 const button = document.getElementById("play"); // botão play/pause
-
-const btnReiniciar = document.querySelectorAll(".reiniciar");
 
 btnEscolha.onclick = () => {
     const nome = document.getElementById("nome").value;
@@ -62,12 +65,12 @@ function gerarQuestoes(temaSelecionado) {
             ? quiz3
             : [];
 
-    if (quiz.length === 0) {
-        console.error(
-            `Tema "${temaSelecionado}" não reconhecido ou sem perguntas.`
-        );
-        return;
-    }
+    // if (quiz.length === 0) {
+    //     console.error(
+    //         `Tema "${temaSelecionado}" não reconhecido ou sem perguntas.`
+    //     );
+    //     return;
+    // }   
 
     perguntasContainer.innerHTML = ""; // Limpa as perguntas existentes
 
@@ -90,6 +93,11 @@ function gerarQuestoes(temaSelecionado) {
 }
 
 btnFinalizarHTML.onclick = () => {
+    btnFinalizarHTML.hidden = true;
+    btnResultadoHTML.hidden = false;
+}
+
+btnResultadoHTML.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasHTML = document.querySelectorAll("#containerPerguntasHTML div");
@@ -126,6 +134,11 @@ btnFinalizarHTML.onclick = () => {
 };
 
 btnFinalizarCSS.onclick = () => {
+    btnFinalizarCSS.hidden = true;
+    btnResultadoCSS.hidden = false;
+}
+
+btnResultadoCSS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasCSS = document.querySelectorAll("#containerPerguntasCSS div");
@@ -162,6 +175,11 @@ btnFinalizarCSS.onclick = () => {
 };
 
 btnFinalizarJS.onclick = () => {
+    btnFinalizarJS.hidden = true;
+    btnResultadoJS.hidden = false;
+}
+
+btnResultadoJS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasJS = document.querySelectorAll("#containerPerguntasJavaScript div");
@@ -230,4 +248,17 @@ btnReiniciar.forEach((btn) => {
         stop();
     };
 });
+
+btnReiniciarFinal.onclick = () => {
+        document.getElementById("nome").value = "";
+        document.getElementById("tema").value = "";
+
+        escolhaTema.hidden = false;
+        quizHTML.hidden = true;
+        quizCSS.hidden = true;
+        quizJS.hidden = true;
+        cronometro.hidden = true;
+        resultados.hidden = true;
+        stop();
+    };
 
