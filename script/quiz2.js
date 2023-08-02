@@ -1,4 +1,4 @@
-const quiz2 = [
+export const quiz2 = [
     {
         pergunta: 'Qual propriedade CSS é usada para adicionar margem interna (espaço interno) a um elemento?',
         respostas: {

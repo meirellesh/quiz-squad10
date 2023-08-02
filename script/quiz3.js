@@ -1,4 +1,4 @@
-const quiz3 = [
+export const quiz3 = [
     {
         pergunta: 'Qual dos seguintes métodos é usado para exibir uma mensagem de alerta na tela do usuário?',
         respostas: {

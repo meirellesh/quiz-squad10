@@ -1,4 +1,4 @@
-const quiz1 = [
+export const quiz1 = [
   {
       pergunta: 'Como criar um hyperlink que abra o link em uma nova janela do navegador?',
       respostas: {
