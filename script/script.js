@@ -120,9 +120,7 @@ btnFinalizarHTML.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(0, resultados1.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
-    gerarRanking();
+    exibirRanking(0, resultados1.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
 
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
@@ -164,10 +162,8 @@ btnFinalizarCSS.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(1, resultados2.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
-    gerarRanking();
-
+    exibirRanking(1, resultados2.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
+    
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
@@ -207,10 +203,8 @@ btnFinalizarJS.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(2, resultados3.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
-    gerarRanking();
-
+    exibirRanking(2, resultados3.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
+    
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
