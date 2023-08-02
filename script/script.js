@@ -43,7 +43,6 @@ btnEscolha.onclick = () => {
     btnFinalizarJS.hidden = false;
     btnResultadoJS.hidden = true;
 
-
     if (temaSelecionado === "HTML") {
         quizHTML.hidden = false;
     } else if (temaSelecionado === "CSS") {
@@ -72,13 +71,6 @@ function gerarQuestoes(temaSelecionado) {
             ? quiz3
             : [];
 
-    // if (quiz.length === 0) {
-    //     console.error(
-    //         `Tema "${temaSelecionado}" não reconhecido ou sem perguntas.`
-    //     );
-    //     return;
-    // }   
-
     perguntasContainer.innerHTML = ""; // Limpa as perguntas existentes
 
     quiz.forEach((questao, index) => {
@@ -94,18 +86,48 @@ function gerarQuestoes(temaSelecionado) {
                 </label><br>
             `;
         }
-
         div.innerHTML += "<br>";
         perguntasContainer.appendChild(div);
     });
 }
 
+function verificarRespostas(temaSelecionado) {
+    const perguntasContainer = document.getElementById(`containerPerguntas${temaSelecionado}`);
+    const perguntas = perguntasContainer.querySelectorAll('.pergunta-card');
+
+    for (let i = 0; i < perguntas.length; i++) {
+        const opcoes = perguntas[i].querySelectorAll('input[type=radio]');
+        let respondida = false;
+
+        for (let j = 0; j < opcoes.length; j++) {
+            if (opcoes[j].checked) {
+                respondida = true;
+                break;
+            }
+        }
+        if (!respondida) {
+            alert('Por favor, responda todas as perguntas antes de finalizar o Quiz.');
+            return false;
+        }
+    }
+    return true;
+}
+
 btnFinalizarHTML.onclick = () => {
-    btnFinalizarHTML.hidden = true;
-    btnResultadoHTML.hidden = false;
+
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasHTML = document.querySelectorAll("#containerPerguntasHTML div");
+
+    if (!verificarRespostas("HTML")) {
+        btnFinalizarHTML.hidden = false;
+        btnResultadoHTML.hidden = true;
+        return;
+    }
+    else {
+        btnFinalizarHTML.hidden = true;
+        btnResultadoHTML.hidden = false;
+    }
 
     perguntasHTML.forEach((pergunta, index) => {
         const opcoes = pergunta.querySelectorAll("input[type=radio]");
@@ -130,12 +152,10 @@ btnFinalizarHTML.onclick = () => {
         hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
-    
 
 }
 
 btnResultadoHTML.onclick = () => {
-    
     exibirResultadosNaTabela();
     exibirRanking(0, resultados1.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
 
@@ -146,16 +166,23 @@ btnResultadoHTML.onclick = () => {
     cronometro.hidden = true;
     resultados.hidden = false;
     stop();
-
-    
 };
 
 btnFinalizarCSS.onclick = () => {
-    btnFinalizarCSS.hidden = true;
-    btnResultadoCSS.hidden = false;
+
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasCSS = document.querySelectorAll("#containerPerguntasCSS div");
+
+    if (!verificarRespostas("CSS")) {
+        btnFinalizarCSS.hidden = false;
+        btnResultadoCSS.hidden = true;
+        return;
+    }
+    else {
+        btnFinalizarCSS.hidden = true;
+        btnResultadoCSS.hidden = false;
+    }
 
     perguntasCSS.forEach((pergunta, index) => {
         const opcoes = pergunta.querySelectorAll("input[type=radio]");
@@ -169,7 +196,6 @@ btnFinalizarCSS.onclick = () => {
                 const cardPergunta = opcao.closest('.pergunta-card');
                 cardPergunta.classList.add('card-resposta-errada');
             }
-            
         });
     });
 
@@ -185,7 +211,6 @@ btnFinalizarCSS.onclick = () => {
 }
 
 btnResultadoCSS.onclick = () => {
-  
     exibirResultadosNaTabela();
     exibirRanking(1, resultados2.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     
@@ -196,15 +221,23 @@ btnResultadoCSS.onclick = () => {
     cronometro.hidden = true;
     resultados.hidden = false;
     stop();
-    
 };
 
 btnFinalizarJS.onclick = () => {
-    btnFinalizarJS.hidden = true;
-    btnResultadoJS.hidden = false;
+
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasJS = document.querySelectorAll("#containerPerguntasJavaScript div");
+
+    if (!verificarRespostas("JavaScript")) {
+        btnFinalizarJS.hidden = false;
+        btnResultadoJS.hidden = true;
+        return;
+    }
+    else {
+        btnFinalizarJS.hidden = true;
+        btnResultadoJS.hidden = false;
+    }
 
     perguntasJS.forEach((pergunta, index) => {
         const opcoes = pergunta.querySelectorAll("input[type=radio]");
@@ -244,6 +277,7 @@ btnResultadoJS.onclick = () => {
     resultados.hidden = false;
     stop();
 };
+
 //Botão musica
 function play() {
     player.play();
