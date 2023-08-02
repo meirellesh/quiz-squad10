@@ -36,6 +36,13 @@ btnEscolha.onclick = () => {
     quizJS.hidden = true;
     cronometro.hidden = true;
     resultados.hidden = true;
+    btnFinalizarHTML.hidden = false;
+    btnResultadoHTML.hidden = true;
+    btnFinalizarCSS.hidden = false;
+    btnResultadoCSS.hidden = true;
+    btnFinalizarJS.hidden = false;
+    btnResultadoJS.hidden = true;
+
 
     if (temaSelecionado === "HTML") {
         quizHTML.hidden = false;
@@ -76,6 +83,7 @@ function gerarQuestoes(temaSelecionado) {
 
     quiz.forEach((questao, index) => {
         const div = document.createElement("div");
+        div.classList.add("pergunta-card");
         div.innerHTML = `<h3>${index + 1}. ${questao.pergunta}</h3>`;
 
         for (let opcao in questao.respostas) {
@@ -95,9 +103,6 @@ function gerarQuestoes(temaSelecionado) {
 btnFinalizarHTML.onclick = () => {
     btnFinalizarHTML.hidden = true;
     btnResultadoHTML.hidden = false;
-}
-
-btnResultadoHTML.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasHTML = document.querySelectorAll("#containerPerguntasHTML div");
@@ -108,6 +113,11 @@ btnResultadoHTML.onclick = () => {
         opcoes.forEach((opcao) => {
             if (opcao.checked && opcao.value === quiz1[index].respostaCorreta) {
                 pontuacao++;
+                const cardPergunta = opcao.closest('.pergunta-card');
+                cardPergunta.classList.add('card-resposta-correta');
+            } else if (opcao.checked){
+                const cardPergunta = opcao.closest('.pergunta-card');
+                cardPergunta.classList.add('card-resposta-errada');
             }
         });
     });
@@ -120,7 +130,12 @@ btnResultadoHTML.onclick = () => {
         hora: new Date().toISOString(),
         pontuacao: `${pontuacao}/${quiz1.length}`,
     });
+    
 
+}
+
+btnResultadoHTML.onclick = () => {
+    
     exibirResultadosNaTabela();
     exibirRanking(0, resultados1.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
 
@@ -131,14 +146,13 @@ btnResultadoHTML.onclick = () => {
     cronometro.hidden = true;
     resultados.hidden = false;
     stop();
+
+    
 };
 
 btnFinalizarCSS.onclick = () => {
     btnFinalizarCSS.hidden = true;
     btnResultadoCSS.hidden = false;
-}
-
-btnResultadoCSS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasCSS = document.querySelectorAll("#containerPerguntasCSS div");
@@ -149,7 +163,13 @@ btnResultadoCSS.onclick = () => {
         opcoes.forEach((opcao) => {
             if (opcao.checked && opcao.value === quiz2[index].respostaCorreta) {
                 pontuacao++;
+                const cardPergunta = opcao.closest('.pergunta-card');
+                cardPergunta.classList.add('card-resposta-correta');
+            } else if (opcao.checked){
+                const cardPergunta = opcao.closest('.pergunta-card');
+                cardPergunta.classList.add('card-resposta-errada');
             }
+            
         });
     });
 
@@ -162,6 +182,10 @@ btnResultadoCSS.onclick = () => {
         pontuacao: `${pontuacao}/${quiz2.length}`,
     });
 
+}
+
+btnResultadoCSS.onclick = () => {
+  
     exibirResultadosNaTabela();
     exibirRanking(1, resultados2.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     
@@ -172,14 +196,12 @@ btnResultadoCSS.onclick = () => {
     cronometro.hidden = true;
     resultados.hidden = false;
     stop();
+    
 };
 
 btnFinalizarJS.onclick = () => {
     btnFinalizarJS.hidden = true;
     btnResultadoJS.hidden = false;
-}
-
-btnResultadoJS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
     const perguntasJS = document.querySelectorAll("#containerPerguntasJavaScript div");
@@ -190,6 +212,11 @@ btnResultadoJS.onclick = () => {
         opcoes.forEach((opcao) => {
             if (opcao.checked && opcao.value === quiz3[index].respostaCorreta) {
                 pontuacao++;
+                const cardPergunta = opcao.closest('.pergunta-card');
+                cardPergunta.classList.add('card-resposta-correta');
+            } else if (opcao.checked){
+                const cardPergunta = opcao.closest('.pergunta-card');
+                cardPergunta.classList.add('card-resposta-errada');
             }
         });
     });
@@ -203,6 +230,9 @@ btnResultadoJS.onclick = () => {
         pontuacao: `${pontuacao}/${quiz3.length}`,
     });
 
+}
+
+btnResultadoJS.onclick = () => {
     exibirResultadosNaTabela();
     exibirRanking(2, resultados3.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
     

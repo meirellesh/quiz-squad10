@@ -236,3 +236,16 @@ td {
   margin: 1px;
 }
 
+.card-resposta-correta {
+  background-color: lightgreen;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.card-resposta-errada {
+  background-color: red; 
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
