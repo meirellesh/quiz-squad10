@@ -68,7 +68,7 @@ th {
     font-size: 2rem;
 }
 
-.reiniciar {
+#reiniciarFinal {
     width: 150px;
     height: 70px;
     padding: 12px;
@@ -88,7 +88,7 @@ th {
     right: 20px;
 }
 
-.reiniciar:hover {
+#reiniciarFinal:hover {
     color: #fff; 
     background-color: rgb(153, 255, 0);
     border-color: rgb(153, 255, 0); 
