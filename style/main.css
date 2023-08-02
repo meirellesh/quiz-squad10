@@ -27,7 +27,6 @@ h1 {
   font-size: 20px;
 }
 
-/*/////////Inicio Hello////////////*/
 .animation {
   width: 307px;
 }
@@ -133,7 +132,6 @@ h1 {
     transform: translate3d(0, -25%, 0);
   }
 }
-/*/////////Final Hello////////////*/
 
 td {
   font-size: 20px;

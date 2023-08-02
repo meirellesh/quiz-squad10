@@ -1,3 +1,7 @@
+import {quiz1} from "./quiz1.js";
+import {quiz2} from "./quiz2.js";
+import {quiz3} from "./quiz3.js";
+
 const escolhaTema = document.getElementById("escolhaTema");
 const btnEscolha = document.querySelector("#btnEscolha");
 const quizHTML = document.querySelector("#quizHTML");
@@ -88,12 +92,13 @@ function gerarQuestoes(temaSelecionado) {
 btnFinalizarHTML.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
+    const perguntasHTML = document.querySelectorAll("#containerPerguntasHTML div");
 
-    quiz1.forEach((questao, index) => {
-        const opcoes = document.getElementsByName(`pergunta${index}`);
+    perguntasHTML.forEach((pergunta, index) => {
+        const opcoes = pergunta.querySelectorAll("input[type=radio]");
 
         opcoes.forEach((opcao) => {
-            if (opcao.checked && opcao.value === questao.respostaCorreta) {
+            if (opcao.checked && opcao.value === quiz1[index].respostaCorreta) {
                 pontuacao++;
             }
         });
@@ -109,11 +114,8 @@ btnFinalizarHTML.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(0, resultados1.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
-    gerarRanking();
+    exibirRanking(0, resultados1.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
 
-    // alert(`Sua pontuação: ${pontuacao}/${quiz1.length}`);
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
@@ -126,12 +128,13 @@ btnFinalizarHTML.onclick = () => {
 btnFinalizarCSS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
+    const perguntasCSS = document.querySelectorAll("#containerPerguntasCSS div");
 
-    quiz2.forEach((questao, index) => {
-        const opcoes = document.getElementsByName(`pergunta${index}`);
+    perguntasCSS.forEach((pergunta, index) => {
+        const opcoes = pergunta.querySelectorAll("input[type=radio]");
 
         opcoes.forEach((opcao) => {
-            if (opcao.checked && opcao.value === questao.respostaCorreta) {
+            if (opcao.checked && opcao.value === quiz2[index].respostaCorreta) {
                 pontuacao++;
             }
         });
@@ -147,11 +150,8 @@ btnFinalizarCSS.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(1, resultados2.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
-    gerarRanking();
-
-    // alert(`Sua pontuação: ${pontuacao}/${quiz2.length}`);
+    exibirRanking(1, resultados2.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
+    
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
@@ -164,12 +164,13 @@ btnFinalizarCSS.onclick = () => {
 btnFinalizarJS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
+    const perguntasJS = document.querySelectorAll("#containerPerguntasJavaScript div");
 
-    quiz3.forEach((questao, index) => {
-        const opcoes = document.getElementsByName(`pergunta${index}`);
+    perguntasJS.forEach((pergunta, index) => {
+        const opcoes = pergunta.querySelectorAll("input[type=radio]");
 
         opcoes.forEach((opcao) => {
-            if (opcao.checked && opcao.value === questao.respostaCorreta) {
+            if (opcao.checked && opcao.value === quiz3[index].respostaCorreta) {
                 pontuacao++;
             }
         });
@@ -185,11 +186,8 @@ btnFinalizarJS.onclick = () => {
     });
 
     exibirResultadosNaTabela();
-    calcularMedia([...resultados1, ...resultados2, ...resultados3]);
-    atualizarRanking(2, resultados3.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
-    gerarRanking();
-
-    // alert(`Sua pontuação: ${pontuacao}/${quiz3.length}`);
+    exibirRanking(2, resultados3.map((resultado) => ({...resultado, pontuacao: parseInt(resultado.pontuacao) })));
+    
     escolhaTema.hidden = true;
     quizHTML.hidden = true;
     quizCSS.hidden = true;
