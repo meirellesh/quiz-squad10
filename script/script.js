@@ -1,3 +1,7 @@
+import {quiz1} from "./quiz1.js";
+import {quiz2} from "./quiz2.js";
+import {quiz3} from "./quiz3.js";
+
 const escolhaTema = document.getElementById("escolhaTema");
 const btnEscolha = document.querySelector("#btnEscolha");
 const quizHTML = document.querySelector("#quizHTML");
