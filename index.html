@@ -12,13 +12,25 @@
 </head>
 
 <body>
-    <header>
-        <h1>Quiz</h1>
-    </header>
     <main>
+        <fieldset class="borda">
+            <h1>Quiz do DEV</h1>
         <section id="escolhaTema">
             <div class="container">
-                <p>Coloque seu nome, escolha um tema e clique em iniciar</p>
+                <div class="animation"> <!-- inicio Hello-->
+                    <div class="content">
+                    <div class="content__container">
+                        <p class="content__container__text">Hello</p>
+                        <ul class="content__container__list">
+                        <li class="content__container__list__item">world !</li>
+                        <li class="content__container__list__item">coder !</li>
+                        <li class="content__container__list__item">users !</li>
+                        <li class="content__container__list__item">Devs !</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div> <!-- Fim Hello-->
+                <p class="paragrafo">Coloque seu nome, escolha um tema e clique em iniciar</p>
                 <form>
                     <table class="tabela">
                         <tr>
@@ -45,12 +57,13 @@
                             </td>
                         </tr>
                     </table>
-                    <button class="campo" type="button" id="btnEscolha">
+                    <button class="campo button-log" type="button" id="btnEscolha">
                         Iniciar Quiz
                     </button>
                 </form>
             </div>
         </section>
+    </fieldset>
 
         <div id="quizHTML" hidden>
             <h2 class="titulo">Quiz: HTML</h2>
