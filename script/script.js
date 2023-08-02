@@ -92,22 +92,16 @@ function gerarQuestoes(temaSelecionado) {
 btnFinalizarHTML.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
+    const perguntasHTML = document.querySelectorAll("#containerPerguntasHTML div");
 
-    quiz1.forEach((questao, index) => {
-        const opcoes = document.getElementsByName(`pergunta${index}`);
-        const selecionada = Array.from(opcoes).some(opcao => opcao.checked);
+    perguntasHTML.forEach((pergunta, index) => {
+        const opcoes = pergunta.querySelectorAll("input[type=radio]");
 
-        if (selecionada) {
-            const respostaCorreta = questao.respostaCorreta;
-            opcoes.forEach((opcao) => {
-                if (opcao.checked && opcao.value === respostaCorreta) {
-                    pontuacao++;
-                    opcao.parentNode.classList.add("resposta-correta");
-                } else if (opcao.checked) {
-                    opcao.parentNode.classList.add("resposta-incorreta");
-                }
-            });
-        }
+        opcoes.forEach((opcao) => {
+            if (opcao.checked && opcao.value === quiz1[index].respostaCorreta) {
+                pontuacao++;
+            }
+        });
     });
 
     resultados1.push({
@@ -134,22 +128,16 @@ btnFinalizarHTML.onclick = () => {
 btnFinalizarCSS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
+    const perguntasCSS = document.querySelectorAll("#containerPerguntasCSS div");
 
-    quiz2.forEach((questao, index) => {
-        const opcoes = document.getElementsByName(`pergunta${index}`);
-        const selecionada = Array.from(opcoes).some(opcao => opcao.checked);
+    perguntasCSS.forEach((pergunta, index) => {
+        const opcoes = pergunta.querySelectorAll("input[type=radio]");
 
-        if (selecionada) {
-            const respostaCorreta = questao.respostaCorreta;
-            opcoes.forEach((opcao) => {
-                if (opcao.checked && opcao.value === respostaCorreta) {
-                    pontuacao++;
-                    opcao.parentNode.classList.add("resposta-correta");
-                } else if (opcao.checked) {
-                    opcao.parentNode.classList.add("resposta-incorreta");
-                }
-            });
-        }
+        opcoes.forEach((opcao) => {
+            if (opcao.checked && opcao.value === quiz2[index].respostaCorreta) {
+                pontuacao++;
+            }
+        });
     });
 
     resultados2.push({
@@ -172,25 +160,20 @@ btnFinalizarCSS.onclick = () => {
     resultados.hidden = false;
     stop();
 };
+
 btnFinalizarJS.onclick = () => {
     const nome = document.getElementById("nome").value;
     let pontuacao = 0;
+    const perguntasJS = document.querySelectorAll("#containerPerguntasJavaScript div");
 
-    quiz3.forEach((questao, index) => {
-        const opcoes = document.getElementsByName(`pergunta${index}`);
-        const selecionada = Array.from(opcoes).some(opcao => opcao.checked);
+    perguntasJS.forEach((pergunta, index) => {
+        const opcoes = pergunta.querySelectorAll("input[type=radio]");
 
-        if (selecionada) {
-            const respostaCorreta = questao.respostaCorreta;
-            opcoes.forEach((opcao) => {
-                if (opcao.checked && opcao.value === respostaCorreta) {
-                    pontuacao++;
-                    opcao.parentNode.classList.add("resposta-correta");
-                } else if (opcao.checked) {
-                    opcao.parentNode.classList.add("resposta-incorreta");
-                }
-            });
-        }
+        opcoes.forEach((opcao) => {
+            if (opcao.checked && opcao.value === quiz3[index].respostaCorreta) {
+                pontuacao++;
+            }
+        });
     });
 
     resultados3.push({
