@@ -15,6 +15,13 @@
 
 body {
   background-color: #CAD2C5;
+  height: 100vh;
+  transition: background 0.2s linear;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  /*height: auto;*/
+    color: #080B0C;
 }
 
 h1 {
