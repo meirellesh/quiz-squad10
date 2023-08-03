@@ -10,7 +10,7 @@ export const quiz1 = [
       respostaCorreta: "b"
   },
   {
-    pergunta: 'Qual é a tag correta para isnerir um vídeo em uma página HTML?',
+    pergunta: 'Qual é a tag correta para inserir um vídeo em uma página HTML?',
     respostas: {
         a: '&lt;video&gt;',
         b: '&lt;media&gt;',
