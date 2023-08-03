@@ -14,12 +14,13 @@
 }
 
 .containerResult {
+    background-color: green;
     color: rgb(37, 36, 36);
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    justify-content:left;
-    height: 100vh;
+    justify-content:center;
+    /*height: 100vh;*/
     width: 100%;
 }
 
