@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root {
-  --page-backgorund: #a8c2ebf6;
-  
+  /*--page-backgorund: #a8c2ebf6;*/
+  --page-backgorund: #CAD2C5;
+    
 }
 
 * {
@@ -13,7 +14,7 @@
 }
 
 body {
-  background-color: #a8c2ebf6;
+  background-color: #CAD2C5;
 }
 
 h1 {
