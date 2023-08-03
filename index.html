@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
+    <link rel="stylesheet" href="style/btns.css">
+    <link rel="stylesheet" href="style/quizes.css">
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/darkmode.css" />
     <link rel="stylesheet" href="style/ranking.css" />
@@ -65,12 +67,13 @@
         </section>
     </fieldset>
 
+    <div class="allQuiz">
         <div id="quizHTML" hidden>
             <div>
                 <form>
                     <div id="containerPerguntasHTML"></div>
                 </form>
-                <div>
+                <div class="btns">
                     <input type="button" value="Reiniciar" class="reiniciar" />
                     <input type="button" value="Finalizar" id="finalizarHTML" />
                     <input type="button" value="Resultado" id="resultadoHTML" hidden>
@@ -83,7 +86,7 @@
                 <form>
                     <div id="containerPerguntasCSS"></div>
                 </form>
-                <div>
+                <div class="btns">
                     <input type="button" value="Reiniciar" class="reiniciar" />
                     <input type="button" value="Finalizar" id="finalizarCSS" />
                     <input type="button" value="Resultado" id="resultadoCSS" hidden/>
@@ -96,7 +99,7 @@
                 <form>
                     <div id="containerPerguntasJavaScript"></div>
                 </form>
-                <div>
+                <div class="btns">
                     <input type="button" value="Reiniciar" class="reiniciar" />
                     <input type="button" value="Finalizar" id="finalizarJS" />
                     <input type="button" value="Resultado" id="resultadoJS" hidden/>
@@ -104,6 +107,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
         <!--Botão dark mode Check Box-->
         <div class="config">
@@ -161,7 +165,7 @@
                     Media de acertos: <span id="mediaAcertos">0</span>
                     Media de erros: <span id="mediaErros">0</span>
                 </p>
-            </div>>
+            </div>
             <div id="rank">
                 <table id="table-content"></table>
             </div>

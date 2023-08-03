@@ -1,0 +1,139 @@
+/* Estilização dos botões do Quiz*/
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reiniciar {
+        width: 150px;
+        height: 70px;
+        padding: 12px;
+        margin-top: 16px;
+        font-size: 1.75rem;
+        color: rgb(37, 36, 36); 
+        font-weight: bold;
+        margin-bottom: 16px;
+        background-color: whitesmoke;
+        border-style: double;
+        border-radius: 12%;
+        border-width: 4px;
+        border-color: whitesmoke;
+        cursor: pointer;
+        bottom: 20px;
+        right: 20px;
+}
+
+#finalizarHTML {
+        width: 150px;
+        height: 70px;
+        padding: 12px;
+        margin-top: 16px;
+        font-size: 1.75rem;
+        color: rgb(37, 36, 36); 
+        font-weight: bold;
+        margin-bottom: 16px;
+        background-color: whitesmoke;
+        border-style: double;
+        border-radius: 12%;
+        border-width: 4px;
+        border-color: whitesmoke;
+        cursor: pointer;
+        bottom: 20px;
+        right: 20px;
+}
+
+#finalizarCSS {
+    width: 150px;
+    height: 70px;
+    padding: 12px;
+    margin-top: 16px;
+    font-size: 1.75rem;
+    color: rgb(37, 36, 36); 
+    font-weight: bold;
+    margin-bottom: 16px;
+    background-color: whitesmoke;
+    border-style: double;
+    border-radius: 12%;
+    border-width: 4px;
+    border-color: whitesmoke;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+}
+
+#finalizarJS {
+    width: 150px;
+    height: 70px;
+    padding: 12px;
+    margin-top: 16px;
+    font-size: 1.75rem;
+    color: rgb(37, 36, 36); 
+    font-weight: bold;
+    margin-bottom: 16px;
+    background-color: whitesmoke;
+    border-style: double;
+    border-radius: 12%;
+    border-width: 4px;
+    border-color: whitesmoke;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+}
+
+#resultadoHTML{
+    width: 170px;
+    height: 70px;
+    padding: 12px;
+    margin-top: 16px;
+    font-size: 1.75rem;
+    color: rgb(37, 36, 36); 
+    font-weight: bold;
+    margin-bottom: 16px;
+    background-color: whitesmoke;
+    border-style: double;
+    border-radius: 12%;
+    border-width: 4px;
+    border-color: whitesmoke;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+}
+
+#resultadoCSS{
+    width: 170px;
+    height: 70px;
+    padding: 12px;
+    margin-top: 16px;
+    font-size: 1.75rem;
+    color: rgb(37, 36, 36); 
+    font-weight: bold;
+    margin-bottom: 16px;
+    background-color: whitesmoke;
+    border-style: double;
+    border-radius: 12%;
+    border-width: 4px;
+    border-color: whitesmoke;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+}
+
+#resultadoJS {
+    width: 170px;
+    height: 70px;
+    padding: 12px;
+    margin-top: 16px;
+    font-size: 1.75rem;
+    color: rgb(37, 36, 36); 
+    font-weight: bold;
+    margin-bottom: 16px;
+    background-color: whitesmoke;
+    border-style: double;
+    border-radius: 12%;
+    border-width: 4px;
+    border-color: whitesmoke;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+}

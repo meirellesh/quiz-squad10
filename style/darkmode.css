@@ -4,6 +4,8 @@ background: linear-gradient(0deg, rgba(34,193,195,0.9906337535014006) 0%, rgba(8
     height: 100vh;
     transition: background 0.2s linear;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
     height: auto;
 }
 
