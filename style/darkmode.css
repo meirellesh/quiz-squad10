@@ -1,18 +1,47 @@
 body {
-    /*background: rgb(34,193,195);*/
-    /*background: linear-gradient(0deg, rgba(34,193,195,0.9906337535014006) 0%, rgba(80,162,195,1) 29%, rgba(100,148,195,1) 55%, rgba(226,206,111,1) 100%);*/
+    background: #CAD2C5;
     height: 100vh;
     transition: background 0.2s linear;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     height: auto;
+    color: #080B0C;
 }
 
 body.dark {
-    background: rgb(55,70,83);
-background: linear-gradient(0deg, rgba(55,70,83,1) 10%, rgba(56,71,85,1) 25%, rgba(61,80,98,1) 36%, rgba(54,68,82,1) 60%, rgba(8,7,1,1) 91%);
-color: white;
+    background: #2F3E46;
+    color: #EAEDE8;
+}
+
+.dark .borda {
+    margin-top: 30px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 35px;
+    --bg-color: #52796F; /*Cor de fundo do fieldset login*/
+    --main-color: #EAEDE8; /*Cor da borda do fieldset login*/
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color); /*Largura da borda*/
+    box-shadow: 4px 4px var(--main-color);
+}
+
+.dark .campo {
+    background-color: #2F3E46;
+    width: 200px;
+    height: 35px;
+    border-style:solid;
+    border-width: 0.1px;
+    border-color: #080B0C;
+    border-radius: 5px;
+    color: #EAEDE8;
+    
 }
 
 .config {
@@ -53,7 +82,7 @@ color: white;
 }
 
 .label .ball {
-    background-color: #fff;
+    background-color: #EAEDE8;
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -71,5 +100,41 @@ color: white;
 }
 
 .config i{
-    color: rgb(37, 36, 36);
+    color: #080B0C;
 }
+
+.dark .pergunta-card {
+    background-color: #52796F; 
+    border: solid #84A98C 2px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+  }
+
+  .dark .card-resposta-correta {
+    background-color: #84A98C;
+    border: solid #2F3E46 2px;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 15px;
+  }
+  
+  .dark .card-resposta-errada {
+    background-color: #DDBBBB; 
+    border: solid #a53e3e 2px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+  }
+
+  .dark .cronometro{
+    background-color: #52796F;
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    font-size: 12px;
+    border: solid #84A98C 2px;
+    padding: 3px;
+    border-radius: 30px;
+    margin: 15px;
+  }

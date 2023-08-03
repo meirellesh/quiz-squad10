@@ -29,3 +29,26 @@
     margin: 10px;
 }
 
+.pergunta-card {
+    background-color: #EAEDE8; 
+    border: solid #84A98C 2px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+  }
+
+  .card-resposta-correta {
+    background-color: #84A98C;
+    border: solid #2F3E46 2px;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 15px;
+  }
+  
+  .card-resposta-errada {
+    background-color: #DDBBBB; 
+    border: solid #a53e3e 2px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+  }
