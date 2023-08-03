@@ -24,6 +24,7 @@ const button = document.getElementById("play"); // botão play/pause
 btnEscolha.onclick = () => {
     const nome = document.getElementById("nome").value;
     const temaSelecionado = document.getElementById("tema").value;
+    const h1 = document.querySelector("#titulo")
 
     if (!nome || !temaSelecionado) {
         alert("Por favor, preencha todos os campos para iniciar o Quiz.");
@@ -44,10 +45,13 @@ btnEscolha.onclick = () => {
     btnResultadoJS.hidden = true;
 
     if (temaSelecionado === "HTML") {
+        h1.textContent = "Quiz: HTML"
         quizHTML.hidden = false;
     } else if (temaSelecionado === "CSS") {
+        h1.textContent = "Quiz: CSS"
         quizCSS.hidden = false;
     } else if (temaSelecionado === "JavaScript") {
+        h1.textContent = "Quiz: JavaScript"
         quizJS.hidden = false;
     }
 
