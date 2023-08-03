@@ -6,6 +6,8 @@ const resultados3 = [];
 function exibirResultadosNaTabela() {
   const tabelaResultados = document.getElementById('tabelaResultados');
   const tbody = tabelaResultados.querySelector('tbody');
+  const h1 = document.querySelector("#titulo")
+  h1.textContent = "Resultados"
 
   if (!tabelaResultados || !tbody) {
     console.error('Tabela de resultados não encontrada.');
