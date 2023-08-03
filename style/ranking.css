@@ -1,80 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caprasimo&family=Chela+One&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Mynerve&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Satisfy&display=swap");
 
 :root {
-    --page-backgorund: #eaede8;
     --result-table: #84A98C;
-    --titulo: #2F3E46;
-    
+    --media-hover: #52796F;
 }
 
 * {
+    
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0; 
 }
 
-.containerResult {
-    background-color: green;
-    color: rgb(37, 36, 36);
+.tabResult {    
     display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content:center;
-    /*height: 100vh;*/
-    width: 100%;
+    justify-content: center;
 }
 
-#tabelaResultados {
-    background-color: #84A98C;
-    width: 20px ;
-    margin-left: 100px;
-    padding: 30px;
-    align-items: center;
+#tabelaResultados {  
+    background: var(--result-table);
+    text-align: justify; 
+    padding: 20px;   
+}
+
+#tabelaResultados td {
+    width: 164px;
+    padding: 12px;    
+}
+
+#rank {    
+    margin-left: 130px;
+    margin-top: 30px;
     text-align: justify;
-    
-}
-
-#rank {
-    margin-left: 100px;
-    margin-top: 10px;
-    
 }
 
 #rank td {
-    text-align: justify;
     padding: 12px 200px 12px 0px;
-    
 }
 
-td, tr, th {
-    text-align: justify;
-    padding: 12px 80px 12px 0px;
-    margin-left: 0;
-}
-
-th {
+th {    
     font-weight: bold;
     font-size: 1.75rem;
+}
+
+.medias {
+    display: flex;
+    margin-left: 130px;
+    padding: 30px 2px;
+    font-style: italic;
+    font-size: 1.30rem;
+    font-weight: bold;
+}
+
+.medias span {
+    margin-right: 100px;
+}
+
+.red {
+    color: #d46464;
+}
+
+.green {
+    color: var(--media-hover); 
 }
 
 #reiniciarFinal {
     width: 250px;
     height: 70px;
     padding: 12px;
-    margin-left: 50%;
-    margin-top: 120px;
+    margin-left: 500px;
+    margin-top: 70px;
     font-size: 1.75rem;
-    color: rgb(37, 36, 36); 
     font-weight: bold;
     margin-bottom: 16px;
-    background-color: #84A98C;
+    background: var(--result-table);
     border-style: none;
     cursor: pointer;
 }
 
 #reiniciarFinal:hover {
-    color: #84A98C; 
-    background-color: rgb(37, 36, 36); 
+    color: #EAEDE8; 
+    background: var(--media-hover); 
 }
 
 .config {
@@ -88,19 +94,4 @@ th {
     justify-content: space-between;
     padding: 15px;
     align-items: center;
-    
 }
-
-.medias {
-    margin-left: 100px;
-    margin-top: 10px;
-    margin-bottom: 2px;
-    padding: 30px 2px;
-    font-style: italic;
-    font-size: 1.50rem;
-}
-
-.medias span {
-    margin-right: 50px;
-}
-
