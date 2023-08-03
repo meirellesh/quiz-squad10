@@ -306,6 +306,8 @@ btnReiniciar.forEach((btn) => {
     btn.onclick = () => {
         document.getElementById("nome").value = "";
         document.getElementById("tema").value = "";
+        const h1 = document.querySelector("#titulo")
+        h1.textContent = "Quiz do DEV"
 
         escolhaTema.hidden = false;
         quizHTML.hidden = true;
@@ -320,6 +322,8 @@ btnReiniciar.forEach((btn) => {
 btnReiniciarFinal.onclick = () => {
         document.getElementById("nome").value = "";
         document.getElementById("tema").value = "";
+        const h1 = document.querySelector("#titulo")
+        h1.textContent = "Quiz do DEV"
 
         escolhaTema.hidden = false;
         quizHTML.hidden = true;
