@@ -239,12 +239,19 @@ td {
 
 .cronometro{
   background-color: #EAEDE8;
+  width: 131px;
   position: fixed;
   top: 1%;
   left: 1%;
-  font-size: 12px;
   border: solid #84A98C 2px;
   padding: 3px;
-  border-radius: 30px;
-  margin: 15px;
+  border-radius: 20px;
+  margin-top: 13px;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-around;
+}
+
+#counter {
+  width: 70px;
 }

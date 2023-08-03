@@ -1,7 +1,6 @@
-
 body.dark {
-    background: #2F3E46;
-    color: #EAEDE8;
+    background: #2f3e46;
+    color: #eaede8;
 }
 
 .dark .borda {
@@ -9,8 +8,8 @@ body.dark {
     margin-left: 400px;
     margin-right: 400px;
     margin-bottom: 35px;
-    --bg-color: #52796F; /*Cor de fundo do fieldset login*/
-    --main-color: #EAEDE8; /*Cor da borda do fieldset login*/
+    --bg-color: #52796f; /*Cor de fundo do fieldset login*/
+    --main-color: #eaede8; /*Cor da borda do fieldset login*/
     background: var(--bg-color);
     display: flex;
     flex-direction: column;
@@ -23,15 +22,14 @@ body.dark {
 }
 
 .dark .campo {
-    background-color: #2F3E46;
+    background-color: #2f3e46;
     width: 200px;
     height: 35px;
-    border-style:solid;
+    border-style: solid;
     border-width: 0.1px;
-    border-color: #080B0C;
+    border-color: #080b0c;
     border-radius: 5px;
-    color: #EAEDE8;
-    
+    color: #eaede8;
 }
 
 .config {
@@ -45,7 +43,6 @@ body.dark {
     justify-content: space-between;
     padding: 15px;
     align-items: center;
-    
 }
 
 .checkbox {
@@ -54,7 +51,7 @@ body.dark {
 }
 
 .label {
-    background-color: #84A98C;
+    background-color: #84a98c;
     border-radius: 50px;
     border-width: 2px;
     cursor: pointer;
@@ -72,7 +69,7 @@ body.dark {
 }
 
 .label .ball {
-    background-color: #EAEDE8;
+    background-color: #eaede8;
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -89,42 +86,46 @@ body.dark {
     transform: translateX(24px);
 }
 
-.config i{
-    color: #080B0C;
+.config i {
+    color: #080b0c;
 }
 
 .dark .pergunta-card {
-    background-color: #52796F; 
-    border: solid #84A98C 2px;
+    background-color: #52796f;
+    border: solid #84a98c 2px;
     margin: 5px;
     padding: 5px;
     border-radius: 15px;
-  }
+}
 
-  .dark .card-resposta-correta {
-    background-color: #84A98C;
-    border: solid #2F3E46 2px;
+.dark .card-resposta-correta {
+    background-color: #84a98c;
+    border: solid #2f3e46 2px;
     margin: 5px;
     padding: 3px;
     border-radius: 15px;
-  }
-  
-  .dark .card-resposta-errada {
-    background-color: #DDBBBB; 
+}
+
+.dark .card-resposta-errada {
+    background-color: #ddbbbb;
     border: solid #a53e3e 2px;
     margin: 5px;
     padding: 5px;
     border-radius: 15px;
-  }
+}
 
-  .dark .cronometro{
-    background-color: #52796F;
+.dark .cronometro {
+    background-color: #eaede8;
+    color: black;
+    width: 131px;
     position: fixed;
     top: 1%;
     left: 1%;
-    font-size: 12px;
-    border: solid #84A98C 2px;
+    border: solid #84a98c 2px;
     padding: 3px;
-    border-radius: 30px;
-    margin: 15px;
-  }
+    border-radius: 20px;
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
