@@ -21,6 +21,9 @@ const btnReiniciarFinal = document.getElementById("reiniciarFinal");
 const player = document.getElementById("player"); // tag audio
 const button = document.getElementById("play"); // botão play/pause
 
+
+
+
 btnEscolha.onclick = () => {
     const nome = document.getElementById("nome").value;
     const temaSelecionado = document.getElementById("tema").value;

@@ -76,7 +76,7 @@ const ranking = [
     { nome: "Livia Barreto", pontuacao: 6 },
     { nome: "Felipe Souza", pontuacao: 9 },
     { nome: "Rodrigo Munhoz", pontuacao: 8 },
-    { nome: "Simone Rodrigues", pontuacao: 7 },
+    { nome: "Simone Silva", pontuacao: 7 },
     { nome: "Carla Silva", pontuacao: 5 },
     { nome: "Douglas Aguiar", pontuacao: 4 },
   ],

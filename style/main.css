@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
 :root {
+
   --page-backgorund: #CAD2C5;
     
+
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
 }
 
 body {
+
   background-color: #CAD2C5;
   height: 100vh;
   transition: background 0.2s linear;
@@ -20,225 +23,239 @@ body {
   display: flex;
   justify-content: center;
     color: #080B0C;
+
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-  font-size: 40px;
-  margin: 5px;
-  color: #080B0C;
+    font-size: 40px;
+    margin: 5px;
+    color: #080b0c;
 }
 
 .paragrafo {
-  margin-top: 20px;
-  font-size: 20px;
-  text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
 }
 
 .animation {
-  width: 307px;
+    width: 307px;
 }
 
 .content {
-  display: block;
-  position: sticky;
-  overflow: hidden;
-  font-family: 'Lato', sans-serif;
-  font-size: 35px;
-  line-height: 40px;
-  color: #080B0C;
+    display: block;
+    position: sticky;
+    overflow: hidden;
+    font-family: "Lato", sans-serif;
+    font-size: 35px;
+    line-height: 40px;
+    color: #080b0c;
 }
 
 .content__container {
-  font-weight: 600;
-  overflow: hidden;
-  height: 40px;
-  padding: 0 40px;
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 40px;
 }
 
 .content__container:before {
-  content: '[';
-  left: 0;
+    content: "[";
+    left: 0;
 }
 
 .content__container:after {
-  content: ']';
-  position: absolute;
-  right: 0;
+    content: "]";
+    position: absolute;
+    right: 0;
 }
 
-.content__container:after, .content__container:before {
-  position: absolute;
-  top: -2px;
-  color: #2F3E46;
-  font-size: 42px;
-  line-height: 40px;
-  -webkit-animation-name: opacity;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: opacity;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+.content__container:after,
+.content__container:before {
+    position: absolute;
+    top: -2px;
+    color: #2f3e46;
+    font-size: 42px;
+    line-height: 40px;
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .content__container__text {
-  display: inline;
-  float: left;
-  margin: 0;
+    display: inline;
+    float: left;
+    margin: 0;
 }
 
 .content__container__list {
-  margin-top: 0;
-  padding-left: 110px;
-  text-align: left;
-  list-style: none;
-  -webkit-animation-name: change;
-  -webkit-animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: change;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
+    margin-top: 0;
+    padding-left: 110px;
+    text-align: left;
+    list-style: none;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .content__container__list__item {
-  line-height: 40px;
-  margin: 0;
+    line-height: 40px;
+    margin: 0;
 }
 
 @keyframes opacity {
-  0%, 100% {
-    opacity: 0;
-  }
+    0%,
+    100% {
+        opacity: 0;
+    }
 
-  50% {
-    opacity: 1;
-  }
+    50% {
+        opacity: 1;
+    }
 }
 
 @keyframes change {
-  0%, 12.66%, 100% {
-    transform: translate3d(0, 0, 0);
-  }
+    0%,
+    12.66%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 
-  16.66%, 29.32% {
-    transform: translate3d(0, -25%, 0);
-  }
+    16.66%,
+    29.32% {
+        transform: translate3d(0, -25%, 0);
+    }
 
-  33.32%, 45.98% {
-    transform: translate3d(0, -50%, 0);
-  }
+    33.32%,
+    45.98% {
+        transform: translate3d(0, -50%, 0);
+    }
 
-  49.98%, 62.64% {
-    transform: translate3d(0, -75%, 0);
-  }
+    49.98%,
+    62.64% {
+        transform: translate3d(0, -75%, 0);
+    }
 
-  66.64%, 79.3% {
-    transform: translate3d(0, -50%, 0);
-  }
+    66.64%,
+    79.3% {
+        transform: translate3d(0, -50%, 0);
+    }
 
-  83.3%, 95.96% {
-    transform: translate3d(0, -25%, 0);
-  }
+    83.3%,
+    95.96% {
+        transform: translate3d(0, -25%, 0);
+    }
 }
 
 td {
-  font-size: 20px;
+    font-size: 20px;
 }
 
-.container{
-  padding: 0 50px 30px 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.container {
+    padding: 0 50px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.container, form {
-  display: flex;
-  flex-direction: column;  
-  align-items: center; 
+.container,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tabela {
-  padding: 6px;
+    padding: 6px;
 }
 
 .tabela td {
-  padding: 6px;
+    padding: 6px;
 }
 
 .borda {
-  padding: 20px;
-  margin: 30px;
-  width: 500px;
-  --bg-color: #84A98C; /*Cor de fundo do fieldset login*/
-  --main-color: #080B0C; /*Cor da borda do fieldset login*/
-  background: var(--bg-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  border-radius: 5px;
-  border: 2px solid var(--main-color); /*Largura da borda*/
-  box-shadow: 2px 4px var(--main-color);
+    padding: 20px;
+    margin: 30px;
+    width: 500px;
+    --bg-color: #84a98c; /*Cor de fundo do fieldset login*/
+    --main-color: #080b0c; /*Cor da borda do fieldset login*/
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color); /*Largura da borda*/
+    box-shadow: 2px 4px var(--main-color);
 }
 
 .campo {
-  width: 250px;
-  height: 40px;
-  border-radius: 5px;
-  border: 2px solid var(--main-color);
-  background-color: var(--bg-color);
-  box-shadow: 4px 4px var(--main-color);
-  font-size: 15px;
-  font-weight: 600;
-  padding: 5px 10px;
-  outline: none;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 10px;
+    outline: none;
 }
 
 .campo::placeholder {
+
   background-color: #EAEDE8;
   color: var(--font-color-sub);
   opacity: 0.8;
+
 }
 
 .campo:focus {
-  border: 2px solid var(--campo-focus);
+    border: 2px solid var(--campo-focus);
 }
 
 .button-log {
-  margin-top: 20px;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  border: 2px solid var(--main-color);
-  background-color: var(--bg-color);
-  box-shadow: 4px 4px var(--main-color);
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button-log:active, .button-confirm:active {
-  box-shadow: 0px 0px var(--main-color);
-  transform: translate(3px, 3px);
+.button-log:active,
+.button-confirm:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
 }
 
-  .campo {
+.campo {
     background-color: #e4e4e4;
     width: 200px;
     height: 35px;
-    border-style:solid;
+    border-style: solid;
     border-width: 0.25px;
-    border-color: #080B0C;
+    border-color: #080b0c;
     border-radius: 5px;
   }
 
@@ -257,15 +274,17 @@ td {
   justify-content: space-around;
   margin: 15px;
   padding: 10px;
+
 }
 
 .cronometro[hidden] {
-  display: none !important;
+    display: none !important;
 }
 
 #counter {
-  width: 70px;
+    width: 70px;
 }
+
 
 
 @media screen and (max-width: 767px) {
@@ -274,3 +293,4 @@ td {
 
 @media screen and (min-width: 768px) and (max-width: 1100px) {
 }
+
