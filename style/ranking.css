@@ -1,46 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caprasimo&family=Chela+One&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Mynerve&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Satisfy&display=swap");
 
 :root {
-    --result-table: #84A98C;
-    --media-hover: #52796F;
+    --result-table: #84a98c;
+    --media-hover: #52796f;
 }
 
 * {
-    
     box-sizing: border-box;
     padding: 0;
-    margin: 0; 
+    margin: 0;
 }
 
-.tabResult {    
+.tabResult {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#tabelaResultados {  
+#tabelaResultados {
+    display: block;
     background: var(--result-table);
-    text-align: justify; 
-    padding: 20px;   
+    text-align: center;
+    padding: 10px 50px;
+    margin: 0px;
+    width: 100%;
 }
 
 #tabelaResultados td {
-    width: 164px;
-    padding: 12px;    
+    width: 60px;
+    padding: 10px 40px;   
+
 }
 
-#rank {    
+#rank {
     margin-left: 130px;
     margin-top: 30px;
     text-align: justify;
 }
 
 #rank td {
-    padding: 12px 200px 12px 0px;
+    padding: 12px;
+    width: 300px;
 }
 
-th {    
+th {
     font-weight: bold;
     font-size: 1.75rem;
+    text-align: center;
 }
 
 .medias {
@@ -48,7 +54,7 @@ th {
     margin-left: 130px;
     padding: 30px 2px;
     font-style: italic;
-    font-size: 1.30rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -61,7 +67,7 @@ th {
 }
 
 .green {
-    color: var(--media-hover); 
+    color: var(--media-hover);
 }
 
 #reiniciarFinal {
@@ -79,8 +85,8 @@ th {
 }
 
 #reiniciarFinal:hover {
-    color: #EAEDE8; 
-    background: var(--media-hover); 
+    color: #eaede8;
+    background: var(--media-hover);
 }
 
 .config {
@@ -94,4 +100,81 @@ th {
     justify-content: space-between;
     padding: 15px;
     align-items: center;
+}
+
+#resultado[hidden] {
+    display: none !important;
+}
+
+@media screen and (max-width: 767px) {  
+
+    #tabelaResultados {
+        display: block;     
+        background: var(--result-table);        
+        margin: 10px;
+        width: 100%;
+    }
+  
+
+    #tabelaResultados td {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #tabelaResultados th{
+        font-size: 22px;
+    }
+
+    #rank {
+        margin-left: 0px;
+        margin-top: 30px;
+        text-align: justify;
+    }
+
+    #rank td {
+        padding: 12px;
+        width: 200px;
+        font-size: 16px;
+    }
+
+    #reiniciarFinal {
+        width: 250px;
+        height: 70px;
+        padding: 12px;
+        margin-left: 30px;
+        font-size: 1.75rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+        background: var(--result-table);
+        border-style: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    #rank th {
+        text-align: center;
+    }
+
+    #rank td {
+        padding: 10px;
+        margin: 3px;
+        text-align: center;
+    }
+
+    #tabelaResultados {
+        display: block;
+        background: var(--result-table);
+        text-align: justify;
+        padding: 10px 50px;
+        margin: 0px;
+        width: 100%;
+    }
+
+    #tabelaResultados td {
+        width: 50px;
+        padding: 10px 35px; 
+    }
 }
