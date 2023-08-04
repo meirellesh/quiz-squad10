@@ -31,6 +31,12 @@ body.dark {
     color: #eaede8;
 }
 
+.dark .campo::placeholder {
+    background-color: #2f3e46;
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+
 .config {
     width: 100px;
     height: 100px;
@@ -67,8 +73,26 @@ body.dark {
     transform: scale(1.5);
 }
 
+.dark .label {
+    background-color: #52796F;
+    border-radius: 50px;
+    border-width: 2px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(1.5);
+}
+
 .label .ball {
-    background-color: #eaede8;
+    background-color: #080B0C;
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -81,12 +105,30 @@ body.dark {
     transition: transform 0.1s linear;
 }
 
+.dark .label .ball {
+    background-color: #eaede8;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.1s linear;
+}   
+
 .checkbox:checked + .label .ball {
     transform: translateX(24px);
 }
 
 .config i {
     color: #080b0c;
+}
+
+.dark .config i {
+    color: #eaede8;
 }
 
 .dark .pergunta-card {
@@ -114,17 +156,21 @@ body.dark {
     border-radius: 15px;
 }
 
-.dark .cronometro {
-    background-color: #eaede8;
-    color: black;
-    width: 131px;
+.dark .cronometro{
+    background-color: #52796F;
+    color: #EAEDE8;
+    width: 150px;
     position: fixed;
     top: 1%;
     left: 1%;
-    border: solid #84a98c 2px;
+    border: solid #EAEDE8 2px;
     padding: 3px;
-    border-radius: 30px;
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
     margin: 15px;
+    padding: 10px;
   }
 
 .dark h1 {
@@ -148,4 +194,8 @@ body.dark {
     text-align: justify; 
     padding: 20px;   
     border-radius: 5px; 
+}
+
+.dark .green {
+    color: var(--result-table); 
 }
