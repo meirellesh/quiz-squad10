@@ -16,14 +16,19 @@
         color: rgb(37, 36, 36); 
         font-weight: bold;
         margin-bottom: 16px;
-        background-color: whitesmoke;
+        background-color: #e4e4e4;
         border-style: double;
         border-radius: 12%;
         border-width: 4px;
-        border-color: whitesmoke;
+        border-color: #e4e4e4;
         cursor: pointer;
         bottom: 20px;
         right: 20px;
+}
+
+.reiniciar:hover {
+    color: #EAEDE8; 
+    background: var(--media-hover); 
 }
 
 #finalizarHTML {
@@ -35,10 +40,16 @@
         color: rgb(37, 36, 36); 
         font-weight: bold;
         margin-bottom: 16px;
-        background-color: whitesmoke;
+        background-color: #e4e4e4;
         cursor: pointer;
         bottom: 20px;
         right: 20px;
+        background: var(--result-table);
+}
+
+#finalizarHTML:hover {
+    color: #EAEDE8; 
+    background: var(--media-hover); 
 }
 
 #finalizarCSS {
@@ -50,10 +61,16 @@
     color: rgb(37, 36, 36); 
     font-weight: bold;
     margin-bottom: 16px;
-    background-color: whitesmoke;
+    background-color: #e4e4e4;
     cursor: pointer;
     bottom: 20px;
     right: 20px;
+    background: var(--result-table);
+}
+
+#finalizarCSS:hover {
+    color: #EAEDE8; 
+    background: var(--media-hover); 
 }
 
 #finalizarJS {
@@ -65,10 +82,16 @@
         color: rgb(37, 36, 36); 
         font-weight: bold;
         margin-bottom: 16px;
-        background-color: whitesmoke;
+        background-color: #e4e4e4;
         cursor: pointer;
         bottom: 20px;
         right: 20px;
+        background: var(--result-table);
+}
+
+#finalizarJS:hover {
+    color: #EAEDE8; 
+    background: var(--media-hover); 
 }
 
 #resultadoHTML{
@@ -80,10 +103,16 @@
     color: rgb(37, 36, 36); 
     font-weight: bold;
     margin-bottom: 16px;
-    background-color: whitesmoke;
+    background-color: #e4e4e4;
     cursor: pointer;
     bottom: 20px;
     right: 20px;
+    background: var(--result-table);
+}
+
+#resultadoHTML:hover {
+    color: #EAEDE8; 
+    background: var(--media-hover); 
 }
 
 #resultadoCSS{
@@ -95,10 +124,16 @@
     color: rgb(37, 36, 36); 
     font-weight: bold;
     margin-bottom: 16px;
-    background-color: whitesmoke;
+    background-color: #e4e4e4;
     cursor: pointer;
     bottom: 20px;
     right: 20px;
+    background: var(--result-table);
+}
+
+#resultadoCSS:hover {
+    color: #EAEDE8; 
+    background: var(--media-hover); 
 }
 
 #resultadoJS {
@@ -110,10 +145,16 @@
     color: rgb(37, 36, 36); 
     font-weight: bold;
     margin-bottom: 16px;
-    background-color: whitesmoke;
+    background-color: #e4e4e4;
     cursor: pointer;
     bottom: 20px;
     right: 20px;
+    background: var(--result-table);
+}
+
+#resultadoJS:hover {
+    color: #EAEDE8; 
+    background: var(--media-hover); 
 }
 
 .borda-btns {
@@ -164,7 +205,7 @@
 }
 
 .campo-btns {
-    background-color: #e4e4e4;
+    background: var(--result-table);
     width: 200px;
     height: 65px;
     border-style:solid;
