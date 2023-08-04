@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root {
-  /*--page-backgorund: #a8c2ebf6;*/
   --page-backgorund: #CAD2C5;
     
 }
@@ -20,7 +19,6 @@ body {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  /*height: auto;*/
     color: #080B0C;
 }
 
@@ -28,7 +26,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 h1 {
