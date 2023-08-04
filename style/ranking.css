@@ -20,7 +20,8 @@
 #tabelaResultados {  
     background: var(--result-table);
     text-align: justify; 
-    padding: 20px;   
+    padding: 20px;
+    border-radius: 5px;   
 }
 
 #tabelaResultados td {
