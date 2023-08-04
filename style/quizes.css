@@ -64,3 +64,79 @@
     border: 2px solid var(--main-color); /*Largura da borda*/
     box-shadow: 4px 4px var(--main-color);
   }
+
+  
+#resultado[hidden] {
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  #tabelaResultados {
+      display: block;
+      background: var(--result-table);
+      margin: 10px;
+      width: 100%;
+  }
+
+  #tabelaResultados td {
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+  }
+
+  #tabelaResultados th {
+      font-size: 22px;
+  }
+
+  #rank {
+      margin-left: 0px;
+      margin-top: 30px;
+      text-align: justify;
+  }
+
+  #rank td {
+      padding: 12px;
+      width: 200px;
+      font-size: 16px;
+  }
+
+  #reiniciarFinal {
+      width: 250px;
+      height: 70px;
+      padding: 12px;
+      margin-left: 30px;
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+      background: var(--result-table);
+      border-style: none;
+      cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  #rank th {
+      text-align: center;
+  }
+
+  #rank td {
+      padding: 10px;
+      margin: 3px;
+      text-align: center;
+  }
+
+  #tabelaResultados {
+      display: block;
+      background: var(--result-table);
+      text-align: justify;
+      padding: 10px 50px;
+      margin: 0px;
+      width: 100%;
+  }
+
+  #tabelaResultados td {
+      width: 50px;
+      padding: 10px 35px;
+  }
+}
