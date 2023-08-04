@@ -258,6 +258,10 @@ td {
   justify-content: space-around;
 }
 
+.cronometro[hidden] {
+  display: none !important;
+}
+
 #counter {
   width: 70px;
 }
