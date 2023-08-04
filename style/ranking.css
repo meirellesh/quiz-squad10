@@ -28,8 +28,7 @@
 
 #tabelaResultados td {
     width: 60px;
-    padding: 10px 40px;   
-
+    padding: 10px 40px;
 }
 
 #rank {
@@ -106,15 +105,13 @@ th {
     display: none !important;
 }
 
-@media screen and (max-width: 767px) {  
-
+@media screen and (max-width: 767px) {
     #tabelaResultados {
-        display: block;     
-        background: var(--result-table);        
+        display: block;
+        background: var(--result-table);
         margin: 10px;
         width: 100%;
     }
-  
 
     #tabelaResultados td {
         width: 100%;
@@ -123,7 +120,7 @@ th {
         text-align: center;
     }
 
-    #tabelaResultados th{
+    #tabelaResultados th {
         font-size: 22px;
     }
 
@@ -174,7 +171,7 @@ th {
     }
 
     #tabelaResultados td {
-        width: 50px;
-        padding: 10px 35px; 
+        width: 50px;        
+        padding: 10px 35px;
     }
 }
