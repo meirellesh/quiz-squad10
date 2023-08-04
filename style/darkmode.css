@@ -90,7 +90,7 @@ body.dark {
 }
 
 .dark .pergunta-card {
-    background-color: #080B0C; 
+    background-color: #1C2529; 
     border: solid #52796F 2px;
     margin: 5px;
     padding: 5px;
@@ -143,3 +143,9 @@ body.dark {
     color: #EAEDE8;
   }
 
+  .dark #tabelaResultados {  
+    background: var(--media-hover);
+    text-align: justify; 
+    padding: 20px;   
+    border-radius: 5px; 
+}
