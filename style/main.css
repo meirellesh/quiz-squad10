@@ -276,11 +276,4 @@ form {
     width: 70px;
 }
 
-@media screen and (max-width: 767px) {
-    main {
-        width: 100%;
-    }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-}
