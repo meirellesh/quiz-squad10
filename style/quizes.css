@@ -52,3 +52,15 @@
     padding: 5px;
     border-radius: 15px;
   }
+
+  .borda-subtitulo {
+    padding: 15px;
+    margin: 30px 200px 30px 200px;
+    --bg-color: #84A98C; /*Cor de fundo do fieldset login*/
+    --main-color: #080B0C; /*Cor da borda do fieldset login*/
+    background: var(--bg-color);
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color); /*Largura da borda*/
+    box-shadow: 4px 4px var(--main-color);
+  }

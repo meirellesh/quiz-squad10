@@ -16,7 +16,7 @@ const btnResultadoHTML = document.querySelector("#resultadoHTML");
 const btnResultadoCSS = document.querySelector("#resultadoCSS");
 const btnResultadoJS = document.querySelector("#resultadoJS");
 const btnReiniciar = document.querySelectorAll(".reiniciar");
-const btnReiniciarFinal = document.getElementById("reiniciarFinal")
+const btnReiniciarFinal = document.getElementById("reiniciarFinal");
 
 const player = document.getElementById("player"); // tag audio
 const button = document.getElementById("play"); // botão play/pause
@@ -43,6 +43,7 @@ btnEscolha.onclick = () => {
     btnResultadoCSS.hidden = true;
     btnFinalizarJS.hidden = false;
     btnResultadoJS.hidden = true;
+ 
 
     if (temaSelecionado === "HTML") {
         h1.textContent = "Quiz: HTML"

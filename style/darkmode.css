@@ -4,12 +4,11 @@ body.dark {
 }
 
 .dark .borda {
-    margin-top: 30px;
-    margin-left: 400px;
-    margin-right: 400px;
-    margin-bottom: 35px;
-    --bg-color: #52796f; /*Cor de fundo do fieldset login*/
-    --main-color: #eaede8; /*Cor da borda do fieldset login*/
+    padding: 20px;
+    margin: 30px;
+    width: 500px;
+    --bg-color: #52796F; /*Cor de fundo do fieldset login*/
+    --main-color: #EAEDE8; /*Cor da borda do fieldset login*/
     background: var(--bg-color);
     display: flex;
     flex-direction: column;
@@ -18,7 +17,7 @@ body.dark {
     gap: 20px;
     border-radius: 5px;
     border: 2px solid var(--main-color); /*Largura da borda*/
-    box-shadow: 4px 4px var(--main-color);
+    box-shadow: 2px 4px var(--main-color);
 }
 
 .dark .campo {
@@ -91,24 +90,25 @@ body.dark {
 }
 
 .dark .pergunta-card {
-    background-color: #52796f;
-    border: solid #84a98c 2px;
+    background-color: #080B0C; 
+    border: solid #52796F 2px;
     margin: 5px;
     padding: 5px;
     border-radius: 15px;
 }
 
-.dark .card-resposta-correta {
-    background-color: #84a98c;
-    border: solid #2f3e46 2px;
+  .dark .card-resposta-correta {
+    background-color: #52796F;
+    border: solid #84A98C 2px;
     margin: 5px;
     padding: 3px;
     border-radius: 15px;
-}
+  }
+  
+  .dark .card-resposta-errada {
+    background-color: #B46A6A; 
+    border: solid #DDBBBB 2px;
 
-.dark .card-resposta-errada {
-    background-color: #ddbbbb;
-    border: solid #a53e3e 2px;
     margin: 5px;
     padding: 5px;
     border-radius: 15px;
@@ -123,9 +123,23 @@ body.dark {
     left: 1%;
     border: solid #84a98c 2px;
     padding: 3px;
-    border-radius: 20px;
-    margin-top: 13px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+    border-radius: 30px;
+    margin: 15px;
+  }
+
+.dark h1 {
+    font-size: 40px;
+    margin: 5px;
+    color: #EAEDE8;
+  }
+
+.dark .content {
+    display: block;
+    position: sticky;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    line-height: 40px;
+    color: #EAEDE8;
+  }
+
