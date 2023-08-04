@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
 :root {
-    /*--page-backgorund: #a8c2ebf6;*/
-    --page-backgorund: #cad2c5;
+
+  --page-backgorund: #CAD2C5;
+    
+
 }
 
 * {
@@ -13,14 +15,15 @@
 }
 
 body {
-    background-color: #cad2c5;
-    height: 100vh;
-    transition: background 0.2s linear;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    /*height: auto;*/
-    color: #080b0c;
+
+  background-color: #CAD2C5;
+  height: 100vh;
+  transition: background 0.2s linear;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+    color: #080B0C;
+
 }
 
 main {
@@ -214,8 +217,11 @@ form {
 }
 
 .campo::placeholder {
-    color: var(--font-color-sub);
-    opacity: 0.8;
+
+  background-color: #EAEDE8;
+  color: var(--font-color-sub);
+  opacity: 0.8;
+
 }
 
 .campo:focus {
@@ -251,21 +257,24 @@ form {
     border-width: 0.25px;
     border-color: #080b0c;
     border-radius: 5px;
-}
+  }
 
-.cronometro {
-    background-color: #eaede8;
-    width: 131px;
-    position: fixed;
-    top: 1%;
-    left: 1%;
-    border: solid #84a98c 2px;
-    padding: 3px;
-    border-radius: 20px;
-    margin-top: 13px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.cronometro{
+  background-color: #84A98C;
+  color: black;
+  width: 150px;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  border: solid #080B0C 2px;
+  padding: 3px;
+  border-radius: 20px;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-around;
+  margin: 15px;
+  padding: 10px;
+
 }
 
 .cronometro[hidden] {
@@ -274,5 +283,14 @@ form {
 
 #counter {
     width: 70px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
 }
 

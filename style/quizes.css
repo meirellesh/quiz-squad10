@@ -65,6 +65,7 @@
     border-radius: 5px;
     border: 2px solid var(--main-color); /*Largura da borda*/
     box-shadow: 4px 4px var(--main-color);
+
 }
 
 @media screen and (max-width: 767px) {
@@ -144,4 +145,5 @@
         padding: 5px;
         border-radius: 15px;
     }
+
 }
